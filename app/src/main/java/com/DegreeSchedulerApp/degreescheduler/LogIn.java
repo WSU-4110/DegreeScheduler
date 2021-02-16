@@ -8,17 +8,22 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LogIn extends AppCompatActivity {
     int loginView = R.layout.activity_login;
     EditText username, password;
     CheckBox checkPassword;
+    TextView privacy;
+    WebView wv;
     private Button sigInBtn, button, passwordReset;
+
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +35,8 @@ public class LogIn extends AppCompatActivity {
         button = findViewById(R.id.btnSignUp);
         sigInBtn = findViewById(R.id.btnLogin);
         passwordReset = findViewById(R.id.forgotPassword);
-
+        privacy = findViewById(R.id.privacy);
+        wv = findViewById(R.id.webPrivacy);
         checkPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -62,6 +68,9 @@ public class LogIn extends AppCompatActivity {
         passwordReset.setOnClickListener(v -> {
             Intent intent = new Intent(this, PasswordReset.class);
             startActivity(intent);
+        });
+        privacy.setOnClickListener(v -> {
+            wv.loadUrl("file:///android_asset/privacy.html");
         });
     }
 }

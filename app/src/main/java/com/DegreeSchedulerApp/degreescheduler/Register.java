@@ -6,8 +6,10 @@ import android.view.View;
 import android.os.Build;
 import androidx.annotation.RequiresApi;
 import android.text.InputType;
+import android.webkit.WebView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Bundle;
 import android.widget.Button;
@@ -19,6 +21,8 @@ public class Register extends AppCompatActivity {
     EditText username, emailId, password, confirmPassword;
     CheckBox checkPassword, privacy;
     String emailPattern = "[a-zA-Z0-9._-]+@wayne+\\.edu+";
+    TextView termsCond;
+    WebView wv;
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,9 @@ public class Register extends AppCompatActivity {
         checkPassword = findViewById(R.id.showPassword);
         privacy = findViewById(R.id.checkBox);
         username = findViewById(R.id.etUsername);
+        termsCond = findViewById(R.id.termsConditions);
+        wv = findViewById(R.id.webTermsCond);
+
         button.setOnClickListener(v -> {
             if(emailId.getText().toString().isEmpty()) {
                 Toast.makeText(getApplicationContext(),"Enter WSU email address",Toast.LENGTH_SHORT).show();
@@ -79,6 +86,8 @@ public class Register extends AppCompatActivity {
                 confirmPassword.setInputType(129);
             }
         });
-
+        termsCond.setOnClickListener(v -> {
+            wv.loadUrl("file:///android_asset/TermsCondition.html");
+        });
     }
 }

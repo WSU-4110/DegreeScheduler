@@ -80,9 +80,23 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="26dp"
-        android:text="I agree to the Terms and Conditions"/>
+        android:text="I agree to the Terms and Conditions "/>
 
-
+    <TextView
+        android:id="@+id/termsConditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="128dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:text="Terms and Conditions"
+        android:textStyle="bold" />
+    <WebView
+        android:id="@+id/webTermsCond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
