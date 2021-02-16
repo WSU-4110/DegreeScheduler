@@ -87,6 +87,7 @@
         android:layout_marginTop="20dp"
         android:clickable="true"
         android:text="Privacy Policy"
+        android:layout_gravity="center"
         android:textColor="#ff0000ff"
         android:textStyle="bold"
         android:textSize="15sp"
