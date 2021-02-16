@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class Register extends AppCompatActivity {
-    int view = R.layout.activity_register;
+    int registerView = R.layout.activity_register;
     Button button;
     EditText username, emailId, password, confirmPassword;
     CheckBox checkPassword, privacy;
@@ -23,7 +23,7 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(view);
+        setContentView(registerView);
         button = findViewById(R.id.signUp);
         emailId = findViewById(R.id.emailId);
         password = findViewById(R.id.etPassword);
@@ -33,7 +33,7 @@ public class Register extends AppCompatActivity {
         username = findViewById(R.id.etUsername);
         button.setOnClickListener(v -> {
             if(emailId.getText().toString().isEmpty()) {
-                Toast.makeText(getApplicationContext(),"Enter email address",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Enter WSU email address",Toast.LENGTH_SHORT).show();
             }
             else {
                 if (emailId.getText().toString().trim().matches(emailPattern)) {
@@ -66,7 +66,7 @@ public class Register extends AppCompatActivity {
 
                 }
                 else {
-                    Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Invalid WSU email address", Toast.LENGTH_SHORT).show();
                 }
             }
         });
