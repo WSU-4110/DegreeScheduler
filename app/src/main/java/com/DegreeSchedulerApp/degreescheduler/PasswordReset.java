@@ -16,7 +16,7 @@ public class PasswordReset extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(passwordResetView);
-        button = findViewById(R.id.signUp);
+        button = findViewById(R.id.restLink);
         emailId = findViewById(R.id.emailId);
         button.setOnClickListener(v -> {
             if(emailId.getText().toString().isEmpty()) {
@@ -24,7 +24,7 @@ public class PasswordReset extends AppCompatActivity {
             }
             else {
                 if (emailId.getText().toString().trim().matches(emailPattern)) {
-                    Toast.makeText(getApplicationContext(), "Password  reset link sent to email address", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Password reset link sent to email address", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "Invalid WSU email address", Toast.LENGTH_SHORT).show();
                 }
