@@ -25,7 +25,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginBottom="16dp"
         android:hint="Username"
-        android:imeOptions="actionNext"
+        android:imeOptions="actionDone"
         android:textSize="22sp"/>
     <EditText
         android:id="@+id/etPassword"
