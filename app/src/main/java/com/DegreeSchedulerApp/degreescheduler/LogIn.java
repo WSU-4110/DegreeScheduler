@@ -8,16 +8,22 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class LogIn extends AppCompatActivity {
     int loginView = R.layout.activity_login;
     EditText username, password;
     CheckBox checkPassword;
-    private Button button, passwordReset;
+    TextView privacy;
+    WebView wv;
+    private Button sigInBtn, button, passwordReset;
+
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +33,10 @@ public class LogIn extends AppCompatActivity {
         password = findViewById(R.id.etPassword);
         checkPassword = findViewById(R.id.showPassword);
         button = findViewById(R.id.btnSignUp);
+        sigInBtn = findViewById(R.id.btnLogin);
         passwordReset = findViewById(R.id.forgotPassword);
-
+        privacy = findViewById(R.id.privacy);
+        wv = findViewById(R.id.webPrivacy);
         checkPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -40,6 +48,19 @@ public class LogIn extends AppCompatActivity {
                 }
             }
         });
+        sigInBtn.setOnClickListener(v -> {
+            if(username.getText().toString().isEmpty()) {
+                Toast.makeText(getApplicationContext(),"Enter user name",Toast.LENGTH_SHORT).show();
+            }
+            else {
+                if (password.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Enter your password", Toast.LENGTH_SHORT).show();
+                } else {
+//                    ****You need to see if the username and password matches from the database later***
+                    Toast.makeText(getApplicationContext(), "You have successfully Logged In", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         button.setOnClickListener(v -> {
             Intent intent = new Intent(this, Register.class);
             startActivity(intent);
@@ -47,6 +68,9 @@ public class LogIn extends AppCompatActivity {
         passwordReset.setOnClickListener(v -> {
             Intent intent = new Intent(this, PasswordReset.class);
             startActivity(intent);
+        });
+        privacy.setOnClickListener(v -> {
+            wv.loadUrl("file:///android_asset/privacy.html");
         });
     }
 }

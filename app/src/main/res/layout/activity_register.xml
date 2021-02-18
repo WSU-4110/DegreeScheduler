@@ -34,9 +34,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="16dp"
         android:hint="New Username"
-        android:imeOptions="actionNext"
+        android:imeOptions="actionDone"
         android:textSize="22sp"/>
     <EditText
         android:id="@+id/etPassword"
@@ -45,6 +45,16 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:hint="New Password"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"
+        android:textSize="22sp"/>
+    <EditText
+        android:id="@+id/passwordConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Password Confirmation"
         android:inputType="textPassword"
         android:imeOptions="actionDone"
         android:textSize="22sp"/>
@@ -70,9 +80,23 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="26dp"
-        android:text="I agree to the Terms and Conditions"/>
+        android:text="I agree to the Terms and Conditions "/>
 
-
+    <TextView
+        android:id="@+id/termsConditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:text="Terms and Conditions"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
+    <WebView
+        android:id="@+id/webTermsCond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

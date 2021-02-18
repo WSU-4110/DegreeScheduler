@@ -1,7 +1,6 @@
 package com.DegreeSchedulerApp.degreescheduler;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
