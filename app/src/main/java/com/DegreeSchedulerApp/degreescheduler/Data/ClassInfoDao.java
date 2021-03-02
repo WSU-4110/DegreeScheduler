@@ -31,11 +31,11 @@ public interface ClassInfoDao {
     @Update
     void update(ClassInfo classInfo);
 
-    @Query("SELECT * FROM user")
+    @Query("SELECT * FROM classInfo")
     public List<ClassInfo> getClassInfo();
 
     @Query("SELECT * FROM classInfo WHERE crn = :crn")
-    public User getItemByCrn(Long crn);
+    public ClassInfo getItemByCrn(Long crn);
 
     //TODO: Add more queries
 

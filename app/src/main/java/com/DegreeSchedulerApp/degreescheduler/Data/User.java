@@ -38,7 +38,7 @@ public class User implements Serializable {
     private String email;
 
     @ColumnInfo(name = "classesCrn")
-    private String[] classesCrn;
+    private String classesCrn;
 
 
     @NonNull
@@ -68,13 +68,14 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public String[] getClassesCrn() {
+    public String getClassesCrn() {
         return classesCrn;
     }
 
-    public void setClassesCrn(String[] classesCrn) {
+    public void setClassesCrn(String classesCrn) {
         this.classesCrn = classesCrn;
     }
+
 
     @Override
     public String toString() {
@@ -82,7 +83,7 @@ public class User implements Serializable {
                 "accessId='" + accessId + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", classesCrn=" + Arrays.toString(classesCrn) +
+                ", classesCrn='" + classesCrn + '\'' +
                 '}';
     }
 }

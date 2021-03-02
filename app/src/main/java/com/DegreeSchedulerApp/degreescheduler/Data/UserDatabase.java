@@ -10,7 +10,7 @@ import androidx.room.RoomDatabase;
  * Ryan K
  */
 
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class, ClassInfo.class}, version = 1)
 public abstract class UserDatabase extends RoomDatabase {
     public abstract UserDao getUserDAO();
 }
