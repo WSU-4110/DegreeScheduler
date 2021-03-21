@@ -1,0 +1,487 @@
+﻿11574;Algorithm Design and Analysis Lecture;CSC3110;09/01/2021;12/21/2021;Monday,Wednesday;
+Formal techniques to support design and analysis of algorithms: underlying mathematical theory and practical considerations of efficiency. Topics include asymptotic complexity bounds, techniques of analysis, algorithmic strategies, advanced data and file structures, and introduction to automata theory and its application to language translation.;Main Campus;
+13464;Algorithm Design and Analysis Lecture;CSC3110;09/01/2021;12/21/2021;Monday,Wednesday;Formal techniques to support design and analysis of algorithms: underlying mathematical theory and practical considerations of efficiency. Topics include asymptotic complexity bounds, techniques of analysis, algorithmic strategies, advanced data and file structures, and introduction to automata theory and its application to language translation.;Other;
+17677;Artificial Intelligence I
+Lecture;CSC6800;09/01/2021;12/21/2021;Monday,Wednesday
+;Basic concepts; topics include: recursive problem solving, knowledge representation using semantic networks and frames, state space search methods, planning and problem solving, game playing and adversarial search methods, rules and production systems (RETE networks), constraint satisfaction techniques and applications, optimization algorithms including genetic algorithms, logic programming. Implementation in Lisp and Prolog.;Main Campus;
+17487;Artificial Intelligence I
+Lecture;CSC6800;09/01/2021;12/21/2021;Monday,Wednesday
+;Ouellette, Dan (Primary);Basic concepts; topics include: recursive problem solving, knowledge representation using semantic networks and frames, state space search methods, planning and problem solving, game playing and adversarial search methods, rules and production systems (RETE networks), constraint satisfaction techniques and applications, optimization algorithms including genetic algorithms, logic programming. Implementation in Lisp and Prolog.;Main Campus;
+17491;AT:Adv Computer Vision&Graphic
+Lecture;CSC7991;09/01/2021;12/21/2021;Friday
+;Ouellette, Dan (Primary);Topics to be announced in the Schedule of Classes.;Main Campus;
+17493;Candidate Maintenance Status: Doctoral Dissertation Research and Direction
+Individual;CSC9995;09/01/2021;12/21/2021;None
+;Ouellette, Dan (Primary);No course description is available.;Main Campus;
+17494;Computer Architecture and Organization
+Lecture;CSC3100;09/01/2021;12/21/2021;Monday,Wednesday
+;Ouellette, Dan (Primary);Organization and architecture of computer systems. Topics include: digital logic and digital systems; machine-level representation of data and programs; assembly level machine organization and programming; register-level description of computer execution and the functional organization of a computer; role and function of programming languages, libraries and operating systems; performance evaluation; systems programming.;Main Campus;
+17499;Computer Architecture and Organization
+Laboratory;CSC3100;09/01/2021;12/21/2021;Monday
+;Ouellette, Dan (Primary);Organization and architecture of computer systems. Topics include: digital logic and digital systems; machine-level representation of data and programs; assembly level machine organization and programming; register-level description of computer execution and the functional organization of a computer; role and function of programming languages, libraries and operating systems; performance evaluation; systems programming.;Main Campus;
+17566;Computer Architecture and Organization
+Laboratory;CSC3100;09/01/2021;12/21/2021;Monday
+;Ouellette, Dan (Primary);Organization and architecture of computer systems. Topics include: digital logic and digital systems; machine-level representation of data and programs; assembly level machine organization and programming; register-level description of computer execution and the functional organization of a computer; role and function of programming languages, libraries and operating systems; performance evaluation; systems programming.;Main Campus;
+17506;Computer Architecture and Organization
+Laboratory;CSC3100;09/01/2021;12/21/2021;Wednesday
+;Palazzolo, Thomas Joseph (Primary);Organization and architecture of computer systems. Topics include: digital logic and digital systems; machine-level representation of data and programs; assembly level machine organization and programming; register-level description of computer execution and the functional organization of a computer; role and function of programming languages, libraries and operating systems; performance evaluation; systems programming.;Main Campus;
+17507;Computer Architecture and Organization
+Lecture;CSC3100;09/01/2021;12/21/2021;Tuesday,Thursday
+;Palazzolo, Thomas Joseph (Primary);Organization and architecture of computer systems. Topics include: digital logic and digital systems; machine-level representation of data and programs; assembly level machine organization and programming; register-level description of computer execution and the functional organization of a computer; role and function of programming languages, libraries and operating systems; performance evaluation; systems programming.;Main Campus;
+17508;Computer Architecture and Organization
+Laboratory;CSC3100;09/01/2021;12/21/2021;Tuesday
+;Palazzolo, Thomas Joseph (Primary);Organization and architecture of computer systems. Topics include: digital logic and digital systems; machine-level representation of data and programs; assembly level machine organization and programming; register-level description of computer execution and the functional organization of a computer; role and function of programming languages, libraries and operating systems; performance evaluation; systems programming.;Main Campus;
+17509;Computer Operating Systems
+Lecture;CSC4420;09/01/2021;12/21/2021;Tuesday,Thursday
+;Palazzolo, Thomas Joseph (Primary);Operating system services; file systems; CPU scheduling; memory management; virtual memory; disk scheduling; deadlocks; concurrent processes. Offered for undergraduate major credit only.;Main Campus;
+17543;Computer Operating Systems
+Laboratory;CSC4420;09/01/2021;12/21/2021;Tuesday
+;Operating system services; file systems; CPU scheduling; memory management; virtual memory; disk scheduling; deadlocks; concurrent processes. Offered for undergraduate major credit only.;Advanced Tech. Educ. Center;
+17544;Computer Operating Systems
+Laboratory;CSC4420;09/01/2021;12/21/2021;Thursday
+;Operating system services; file systems; CPU scheduling; memory management; virtual memory; disk scheduling; deadlocks; concurrent processes. Offered for undergraduate major credit only.;Advanced Tech. Educ. Center;
+17545;Computer Operating Systems
+Lecture;CSC4420;09/01/2021;12/21/2021;Tuesday,Thursday
+;Operating system services; file systems; CPU scheduling; memory management; virtual memory; disk scheduling; deadlocks; concurrent processes. Offered for undergraduate major credit only.;Schoolcraft College;
+17546;Computer Operating Systems
+Laboratory;CSC4420;09/01/2021;12/21/2021;Thursday
+;Operating system services; file systems; CPU scheduling; memory management; virtual memory; disk scheduling; deadlocks; concurrent processes. Offered for undergraduate major credit only.;Schoolcraft College;
+16562;Computer Science I
+Lecture;CSC2110;09/01/2021;12/21/2021;Monday,Wednesday
+;Witten, Doug (Primary);Rigorous introduction to fundamental object-oriented concepts and techniques of computer programming using an object-oriented language. Introduction to data abstraction; design of abstract data types. Introduction to recursion; programming with generic data types; inheritance; polymorphism; and exception handlers. Concepts applied to console programs and event-driven programming using a simple graphics API.;Main Campus;
+17510;Computer Science I
+Laboratory;CSC2110;09/01/2021;12/21/2021;Monday,Wednesday
+;Castro Hernandez, Alberto (Primary);Rigorous introduction to fundamental object-oriented concepts and techniques of computer programming using an object-oriented language. Introduction to data abstraction; design of abstract data types. Introduction to recursion; programming with generic data types; inheritance; polymorphism; and exception handlers. Concepts applied to console programs and event-driven programming using a simple graphics API.;Main Campus;
+17511;Computer Science I
+Laboratory;CSC2110;09/01/2021;12/21/2021;Monday,Wednesday
+;Castro Hernandez, Alberto (Primary);Rigorous introduction to fundamental object-oriented concepts and techniques of computer programming using an object-oriented language. Introduction to data abstraction; design of abstract data types. Introduction to recursion; programming with generic data types; inheritance; polymorphism; and exception handlers. Concepts applied to console programs and event-driven programming using a simple graphics API.;Main Campus;
+17512;Computer Science I
+Laboratory;CSC2110;09/01/2021;12/21/2021;Monday,Wednesday
+;Castro Hernandez, Alberto (Primary);Rigorous introduction to fundamental object-oriented concepts and techniques of computer programming using an object-oriented language. Introduction to data abstraction; design of abstract data types. Introduction to recursion; programming with generic data types; inheritance; polymorphism; and exception handlers. Concepts applied to console programs and event-driven programming using a simple graphics API.;Main Campus;
+17514;Computer Science I
+Lecture;CSC2110;09/01/2021;12/21/2021;Tuesday,Thursday
+;Castro Hernandez, Alberto (Primary);Rigorous introduction to fundamental object-oriented concepts and techniques of computer programming using an object-oriented language. Introduction to data abstraction; design of abstract data types. Introduction to recursion; programming with generic data types; inheritance; polymorphism; and exception handlers. Concepts applied to console programs and event-driven programming using a simple graphics API.;Main Campus;
+17547;Computer Science I
+Laboratory;CSC2110;09/01/2021;12/21/2021;Tuesday,Thursday
+;Rigorous introduction to fundamental object-oriented concepts and techniques of computer programming using an object-oriented language. Introduction to data abstraction; design of abstract data types. Introduction to recursion; programming with generic data types; inheritance; polymorphism; and exception handlers. Concepts applied to console programs and event-driven programming using a simple graphics API.;Advanced Tech. Educ. Center;
+17548;Computer Science I
+Lecture;CSC2110;09/01/2021;12/21/2021;Monday,Wednesday
+;Rigorous introduction to fundamental object-oriented concepts and techniques of computer programming using an object-oriented language. Introduction to data abstraction; design of abstract data types. Introduction to recursion; programming with generic data types; inheritance; polymorphism; and exception handlers. Concepts applied to console programs and event-driven programming using a simple graphics API.;Advanced Tech. Educ. Center;
+17549;Computer Science I
+Laboratory;CSC2110;09/01/2021;12/21/2021;Monday,Wednesday
+;Rigorous introduction to fundamental object-oriented concepts and techniques of computer programming using an object-oriented language. Introduction to data abstraction; design of abstract data types. Introduction to recursion; programming with generic data types; inheritance; polymorphism; and exception handlers. Concepts applied to console programs and event-driven programming using a simple graphics API.;Schoolcraft College;
+17550;Computer Science II
+Lecture;CSC2200;09/01/2021;12/21/2021;Monday,Wednesday
+;Design and implementation of fundamental abstract data types of computer science (such as stacks, queues, trees, lists, hashing, and graphs), using an object-oriented language. Programming requirements include the implementation of abstract data types using arrays and dynamic links; recursion; sorting and searching; hashing; and string processing. Introduction to algorithm analysis.;Schoolcraft College;
+17515;Computer Science II
+Laboratory;CSC2200;09/01/2021;12/21/2021;Monday
+;Kotov, Alexander (Primary);Design and implementation of fundamental abstract data types of computer science (such as stacks, queues, trees, lists, hashing, and graphs), using an object-oriented language. Programming requirements include the implementation of abstract data types using arrays and dynamic links; recursion; sorting and searching; hashing; and string processing. Introduction to algorithm analysis.;Main Campus;
+17516;Computer Science II
+Laboratory;CSC2200;09/01/2021;12/21/2021;Wednesday
+;Kotov, Alexander (Primary);Design and implementation of fundamental abstract data types of computer science (such as stacks, queues, trees, lists, hashing, and graphs), using an object-oriented language. Programming requirements include the implementation of abstract data types using arrays and dynamic links; recursion; sorting and searching; hashing; and string processing. Introduction to algorithm analysis.;Main Campus;
+17517;Computer Science II
+Lecture;CSC2200;09/01/2021;12/21/2021;Monday,Wednesday
+;Kotov, Alexander (Primary);Design and implementation of fundamental abstract data types of computer science (such as stacks, queues, trees, lists, hashing, and graphs), using an object-oriented language. Programming requirements include the implementation of abstract data types using arrays and dynamic links; recursion; sorting and searching; hashing; and string processing. Introduction to algorithm analysis.;Main Campus;
+17551;Computer Science II
+Laboratory;CSC2200;09/01/2021;12/21/2021;Wednesday
+;Design and implementation of fundamental abstract data types of computer science (such as stacks, queues, trees, lists, hashing, and graphs), using an object-oriented language. Programming requirements include the implementation of abstract data types using arrays and dynamic links; recursion; sorting and searching; hashing; and string processing. Introduction to algorithm analysis.;Advanced Tech. Educ. Center;
+17552;Computer Science II
+Lecture;CSC2200;09/01/2021;12/21/2021;Tuesday,Thursday
+;Design and implementation of fundamental abstract data types of computer science (such as stacks, queues, trees, lists, hashing, and graphs), using an object-oriented language. Programming requirements include the implementation of abstract data types using arrays and dynamic links; recursion; sorting and searching; hashing; and string processing. Introduction to algorithm analysis.;Advanced Tech. Educ. Center;
+17553;Computer Science II
+Laboratory;CSC2200;09/01/2021;12/21/2021;Thursday
+;Design and implementation of fundamental abstract data types of computer science (such as stacks, queues, trees, lists, hashing, and graphs), using an object-oriented language. Programming requirements include the implementation of abstract data types using arrays and dynamic links; recursion; sorting and searching; hashing; and string processing. Introduction to algorithm analysis.;Schoolcraft College;
+17554;Computer Systems Security
+Lecture;CSC5270;09/01/2021;12/21/2021;Monday,Wednesday
+;Fundamental technologies for enabling an e-society which is more predictable, more accountable, and less vulnerable to attacks. Covers three components: security requirements and protocols, cryptography algorithms, and case studies.;Schoolcraft College;
+15349;Computer Systems Security
+Lecture;CSC5270;09/01/2021;12/21/2021;Monday,Wednesday
+;Palazzolo, Thomas Joseph (Primary);Fundamental technologies for enabling an e-society which is more predictable, more accountable, and less vulnerable to attacks. Covers three components: security requirements and protocols, cryptography algorithms, and case studies.;Main Campus;
+14390;Cyber Security Practice
+Lecture;CSC5290;09/01/2021;12/21/2021;Tuesday,Thursday
+;Provides hands-on experience in playing with security software and network systems in a live laboratory environment, with the purpose of understating real-world threats. Focus will be on attacks (e.g., buffer overflow, heap spray, kernel rootkits, and denial of service), hacking fundamentals (e.g., scanning and reconnaissance), and defenses (e.g., intrusion detection systems and firewalls).;Advanced Tech. Educ. Center;
+16563;Database Management Systems I
+Lecture;CSC6710;09/01/2021;12/21/2021;Monday,Wednesday
+;Jayyousi, Thaer Wael (Primary);Provides hands-on experience in playing with security software and network systems in a live laboratory environment, with the purpose of understating real-world threats. Focus will be on attacks (e.g., buffer overflow, heap spray, kernel rootkits, and denial of service), hacking fundamentals (e.g., scanning and reconnaissance), and defenses (e.g., intrusion detection systems and firewalls).;Main Campus;
+14907;Design and Analysis of Algorithms
+Lecture;CSC6580;09/01/2021;12/21/2021;Tuesday,Thursday
+;Best case, worst case, and expected case complexity analysis; asymptotic approximations; solutions of recurrence equations; probabilistic techniques; divide-and-conquer; the greedy approach; dynamic programming; branch and bound; NP-completeness; parallel algorithms.;Advanced Tech. Educ. Center;
+17518;Digital Image Processing and Analysis
+Lecture;CSC6860;09/01/2021;12/21/2021;Monday,Wednesday
+;Palazzolo, Thomas Joseph (Primary);Review of image formation and acquisition; image transformation; image enhancement and restoration; image compression; morphological image processing; edge detection and segmentation; architecture for image processing.;Main Campus;
+17519;Directed Study
+Individual;CSC4990;09/01/2021;12/21/2021;None
+;Palazzolo, Thomas Joseph (Primary);Individual study as agreed on by student and supervising faculty. Primarily for material not covered in regular courses.;Main Campus;
+17520;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;Palazzolo, Thomas Joseph (Primary);No course description is available.;Main Campus;
+17521;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;Palazzolo, Thomas Joseph (Primary);No course description is available.;Main Campus;
+17555;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;No course description is available.;Advanced Tech. Educ. Center;
+17556;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;No course description is available.;Advanced Tech. Educ. Center;
+12027;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;Castro Hernandez, Alberto (Primary);No course description is available.;Main Campus;
+13521;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;No course description is available.;Advanced Tech. Educ. Center;
+13597;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;Hua, Jing (Primary);No course description is available.;Main Campus;
+12115;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None;No course description is available.;Other;
+17522;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;Bosu, Amiangshu (Primary);No course description is available.;Main Campus;
+17523;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;Bosu, Amiangshu (Primary);No course description is available.;Main Campus;
+17524;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;Bosu, Amiangshu (Primary);No course description is available.;Main Campus;
+17557;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None;No course description is available.;Advanced Tech. Educ. Center;
+17558;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+
+
+;No course description is available.;Advanced Tech. Educ. Center;
+17565;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;Dong, Zheng (Primary);No course description is available.;Main Campus;
+14064;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;Dong, Zheng (Primary);No course description is available.;Main Campus;
+17680;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;No course description is available.;Main Campus;
+17681;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;No course description is available.;Main Campus;
+17525;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;BROCANELLI, Marco (Primary);No course description is available.;Main Campus;
+17526;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;BROCANELLI, Marco (Primary);No course description is available.;Main Campus;
+17527;Directed Study
+Individual;CSC7990;09/01/2021;12/21/2021;None
+;BROCANELLI, Marco (Primary);No course description is available.;Main Campus;
+17559;Doctoral Candidate Status I: Dissertation Research and Direction
+Individual;CSC9991;09/01/2021;12/21/2021;None
+;No course description is available.;Advanced Tech. Educ. Center;
+17560;Doctoral Candidate Status II: Dissertation Research and Direction
+Individual;CSC9992;09/01/2021;12/21/2021;None
+;No course description is available.;Advanced Tech. Educ. Center;
+12387;Doctoral Candidate Status III: Dissertation Research and Direction
+Individual;CSC9993;09/01/2021;12/21/2021;None
+;Goel, Narendra S. (Primary);No course description is available.;Main Campus;
+13905;Doctoral Candidate Status IV: Dissertation Research and Direction
+Individual;CSC9994;09/01/2021;12/21/2021;None
+;No course description is available.;Advanced Tech. Educ. Center;
+13465;Ethics in Computer Science
+Lecture;CSC3010;09/01/2021;12/21/2021;Monday,Wednesday
+;Castro Hernandez, Alberto (Primary);Students will study the ethical and legal issues that arise with the usage and development of computing technology. Students will learn the responsibilities of the computer professionals and how to make appropriate decisions when faced with legal and ethical issues in computing.;Main Campus;
+13691;Ethics in Computer Science
+Lecture;CSC3010;09/01/2021;12/21/2021;Monday,Wednesday
+;Students will study the ethical and legal issues that arise with the usage and development of computing technology. Students will learn the responsibilities of the computer professionals and how to make appropriate decisions when faced with legal and ethical issues in computing.;Advanced Tech. Educ. Center;
+10067;Fundamental Structures in Computer Science
+Lecture;CSC1500;09/01/2021;12/21/2021;Monday,Wednesday
+;Grosu, Daniel (Primary);Introduction to fundamental control and data structures in computer science such as algorithms and complexity; recursive algorithms; program correctness using the predicate calculus; reasoning about algorithms using mathematical induction; divide and conquer algorithms; recurrence relations; set properties and their computation; and computing with relations. Graph properties and their computation, and tree properties and their computation, will be covered if time permits.;Other;
+10166;Fundamental Structures in Computer Science
+Laboratory;CSC1500;09/01/2021;12/21/2021;Monday,Wednesday
+;Grosu, Daniel (Primary);Introduction to fundamental control and data structures in computer science such as algorithms and complexity; recursive algorithms; program correctness using the predicate calculus; reasoning about algorithms using mathematical induction; divide and conquer algorithms; recurrence relations; set properties and their computation; and computing with relations. Graph properties and their computation, and tree properties and their computation, will be covered if time permits.;Other;
+17569;Fundamental Structures in Computer Science
+Laboratory;CSC1500;09/01/2021;12/21/2021;Monday,Wednesday
+;Mousavi Mojab, Seyed Ziae (Primary);Introduction to fundamental control and data structures in computer science such as algorithms and complexity; recursive algorithms; program correctness using the predicate calculus; reasoning about algorithms using mathematical induction; divide and conquer algorithms; recurrence relations; set properties and their computation; and computing with relations. Graph properties and their computation, and tree properties and their computation, will be covered if time permits.;Main Campus;
+17570;Fundamental Structures in Computer Science
+Laboratory;CSC1500;09/01/2021;12/21/2021;Monday,Wednesday;Mousavi Mojab, Seyed Ziae (Primary);Introduction to fundamental control and data structures in computer science such as algorithms and complexity; recursive algorithms; program correctness using the predicate calculus; reasoning about algorithms using mathematical induction; divide and conquer algorithms; recurrence relations; set properties and their computation; and computing with relations. Graph properties and their computation, and tree properties and their computation, will be covered if time permits.;Main Campus;
+17571;Fundamental Structures in Computer Science
+Lecture;CSC1500;09/01/2021;12/21/2021;Monday,Wednesday
+;Mousavi Mojab, Seyed Ziae (Primary);Introduction to fundamental control and data structures in computer science such as algorithms and complexity; recursive algorithms; program correctness using the predicate calculus; reasoning about algorithms using mathematical induction; divide and conquer algorithms; recurrence relations; set properties and their computation; and computing with relations. Graph properties and their computation, and tree properties and their computation, will be covered if time permits.;Main Campus;
+17572;Fundamental Structures in Computer Science
+Laboratory;CSC1500;09/01/2021;12/21/2021;Wednesday
+;Mousavi Mojab, Seyed Ziae (Primary);Introduction to fundamental control and data structures in computer science such as algorithms and complexity; recursive algorithms; program correctness using the predicate calculus; reasoning about algorithms using mathematical induction; divide and conquer algorithms; recurrence relations; set properties and their computation; and computing with relations. Graph properties and their computation, and tree properties and their computation, will be covered if time permits.;Main Campus;
+10777;Fundamental Structures in Computer Science
+Lecture;CSC1500;09/01/2021;12/21/2021;Tuesday,Thursday
+;Grosu, Daniel (Primary);Introduction to fundamental control and data structures in computer science such as algorithms and complexity; recursive algorithms; program correctness using the predicate calculus; reasoning about algorithms using mathematical induction; divide and conquer algorithms; recurrence relations; set properties and their computation; and computing with relations. Graph properties and their computation, and tree properties and their computation, will be covered if time permits.;Other;
+15530;Fundamental Structures in Computer Science
+Laboratory;CSC1500;09/01/2021;12/21/2021;Tuesday,Thursday
+;Witten, Doug (Primary);Introduction to fundamental control and data structures in computer science such as algorithms and complexity; recursive algorithms; program correctness using the predicate calculus; reasoning about algorithms using mathematical induction; divide and conquer algorithms; recurrence relations; set properties and their computation; and computing with relations. Graph properties and their computation, and tree properties and their computation, will be covered if time permits.;Main Campus;
+12765;Game Programming and Design I
+Lecture;CSC5430;09/01/2021;12/21/2021;Monday,Wednesday
+;Xu, Lihao (Primary);Fundamentals of game programming and game design using C++, DirectX, Windows, and C#.;Main Campus;
+12790;Game Programming and Design I
+Lecture;CSC5430;09/01/2021;12/21/2021;Monday,Wednesday
+;Xu, Lihao (Primary);Fundamentals of game programming and game design using C++, DirectX, Windows, and C#.;Main Campus;
+15973;Game Programming and Design I: Lab
+Laboratory;CSC5431;09/01/2021;12/21/2021;Wednesday
+;Laboratory for CSC 5430. Focus on modding, or making changes to existing programs to achieve specific results.;Other;
+16734;Game Programming and Design I: Lab
+Laboratory;CSC5431;09/01/2021;12/21/2021;Wednesday
+;Jang, Rhongho (Primary);Laboratory for CSC 5430. Focus on modding, or making changes to existing programs to achieve specific results.;Main Campus;
+12016;Graduate Seminar
+Lecture;CSC8990;09/01/2021;12/21/2021;Tuesday
+;Reynolds, Robert Gene (Primary);Discussion of current research by faculty and visitors.;Main Campus;
+12114;Honors Thesis
+Individual;CSC4999;09/01/2021;12/21/2021;None
+;Reynolds, Robert Gene (Primary);Independent study under supervision.;Main Campus;
+12017;Human-Computer Interaction
+Lecture;CSC3400;09/01/2021;12/21/2021;Tuesday,Thursday
+;Reynolds, Robert Gene (Primary);User interface design, usability, evaluation, user-centered design.;Main Campus;
+12823;Intelligent Systems: Algorithms and Tools
+Lecture;CSC5800;09/01/2021;12/21/2021;Monday,Wednesday
+;Reynolds, Robert Gene (Primary);Introduction to basic algorithms and software tools for intelligent data representation and analysis, including: data pre-processing, data exploration and visualization, model evaluation, predictive modeling, classification methods, association analysis, clustering, anomaly detection, representing extracted patterns as expertise, tools for data mining and intelligent systems such as WEKA, CLIPS, and MATLAB.;Main Campus;
+10729;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Ouellette, Dan (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+15303;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Arslanturk, Suzan (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+15279;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Zhu, Dongxiao (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+16881;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Witus, Gary (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+14985;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Other;
+15350;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Candelori, Luca (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+15607;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+17016;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Advanced Tech. Educ. Center;
+17592;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Bosu, Amiangshu (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+13625;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Grosu, Daniel (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+17798;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Fisher, Nathan W. (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+10768;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Arslanturk, Suzan (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+14425;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Fisher, Nathan W. (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+15104;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Lu, Shiyong (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+10695;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Reynolds, Robert Gene (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+12029;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Reynolds, Robert Gene (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+15825;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Dong, Ming (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Main Campus;
+11264;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Arslanturk, Suzan (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Other;
+12541;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;Bosu, Amiangshu (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Other;
+12542;Internship in Computer Science
+Individual;CSC6995;09/01/2021;12/21/2021;None
+;BROCANELLI, Marco (Primary);Experience in industry using tools from the computer science curriculum. Students provide a written report based on the internship experience.;Other;
+13217;Introduction to C and Unix
+Combined Lab/Lecture;CSC1050;09/01/2021;12/21/2021;Friday
+;Dong, Ming (Primary);Introduction to Unix, Unix editor, and C Programming Language. Unix development tools and fundamentals of C language discussed. No credit for computer science students after CSC 1100.;Other;
+12543;Introduction to C++ Programming Language
+Combined Lab/Lecture;CSC2000;09/01/2021;12/21/2021;Monday,Wednesday
+;Dong, Zheng (Primary);Elements of C++; arrays, pointers and references; operators; classes and objects. No credit after CSC 1100 and CSC 1101.;Other;
+12544;Introduction to Computer Networking
+Lecture;CSC4290;09/01/2021;12/21/2021;Wednesday
+;Draghici, Sorin (Primary);Introduction of topics such as network architecture, multiple access control, packet switching, routing and flow control, congestion control and quality-of-service, Internet protocols, and elements of distributed computing.;Other;
+12545;Introduction to Computer Networking
+Lecture;CSC4290;09/01/2021;12/21/2021;Wednesday
+;Fisher, Nathan W. (Primary);Introduction of topics such as network architecture, multiple access control, packet switching, routing and flow control, congestion control and quality-of-service, Internet protocols, and elements of distributed computing.;Other;
+12639;Introduction to Computer Science
+Lecture;CSC1000;09/01/2021;12/21/2021;Monday
+;Grosu, Daniel (Primary);Provides an overview of current computing technology, organization, and use. Topics surveyed include data representation and storage, hardware and software organization, communications technologies, ethical and security issues. Provides hands-on training in common application software, such as word processing, spreadsheets, presentation, as well as in electronic telecommunications, such as e-mail, Internet and database searches. The University database and Internet pages are emphasized.;Other;
+13862;Introduction to Database Management Systems
+Lecture;CSC4710;09/01/2021;12/21/2021;Monday,Wednesday
+;Han, Zhizhong (Primary);Topics include: database concepts, ER modeling, schemas and constraints, SQL and relational algebra, web-based database applications, triggers and views, physical organization and indexing, query processing, query optimization, NoSQL databases.;Other;
+12640;Introduction to Database Management Systems
+Lecture;CSC4710;09/01/2021;12/21/2021;Tuesday,Thursday
+;Hua, Jing (Primary);Topics include: database concepts, ER modeling, schemas and constraints, SQL and relational algebra, web-based database applications, triggers and views, physical organization and indexing, query processing, query optimization, NoSQL databases.;Other;
+12641;Introduction to Machine Learning and Applications
+Lecture;CSC5825;09/01/2021;12/21/2021;Monday,Wednesday
+;Jang, Rhongho (Primary);Through algorithmic investigation, brainstorming, and case analysis, students develop the skills and strategies that are necessary for effective leaning from data, including Big Data emerging from science and engineering.;Other;
+12642;Introduction to Theoretical Computer Science
+Lecture;CSC4500;09/01/2021;12/21/2021;Monday,Wednesday
+;Kotov, Alexander (Primary);Finite automata and regular expressions; context-free grammars; pushdown automata; Turing machines; hierarchy of formal languages and automata; computability and decidability.;Other;
+12643;Introduction to Theoretical Computer Science
+Lecture;CSC4500;09/01/2021;12/21/2021;Monday
+;Lu, Shiyong (Primary);Finite automata and regular expressions; context-free grammars; pushdown automata; Turing machines; hierarchy of formal languages and automata; computability and decidability.;Other;
+12644;Introduction to Web Technology
+Lecture;CSC3750;09/01/2021;12/21/2021;None
+;Reynolds, Robert Gene (Primary);Understanding the Internet using several access methods; required software and tools. Topics include: e-mail, FTP, Telnet, Gopher, Archie, Newsgroups, WWW, HTML, CGI and PHP scripting and how to create an active web site. Laboratory exercises required. No credit after CSC 5750.;Other;
+12645;IT Software Management
+Lecture;CSC4310;09/01/2021;12/21/2021;Tuesday,Thursday
+;Saifullah, Abusayeed (Primary);Covers 12 disciplines of systems management in the approximate order in which they became prevalent and integral to an infrastructure’s operation. In doing so, it will cover the people, process, and technology aspects of systems management. The people discussion shows the importance of executive support, customer service, and other management aspects of delivering and supporting IT services. The process issues of systems management are addressed through study of IT infrastructure library (ITIL) processes. The technology aspect covers several key developments that enable these disciplines to be implemented more productively including process automation.;Other;
+13218;Java Programming
+Combined Lab/Lecture;CSC3020;09/01/2021;12/21/2021;Tuesday,Thursday
+;Schwiebert, Loren J. (Primary);Introduction to the fundamentals of programming using Java. Topics include: object-oriented programming, classes, constructors, flow control statements, data types, methods, inheritance, data hiding, abstraction, exceptions, file I/O, Java GUI, and Java packages.;Other;
+12646;Java Programming
+Combined Lab/Lecture;CSC3020;09/01/2021;12/21/2021;Tuesday,Thursday
+;Shi, Weisong (Primary);Introduction to the fundamentals of programming using Java. Topics include: object-oriented programming, classes, constructors, flow control statements, data types, methods, inheritance, data hiding, abstraction, exceptions, file I/O, Java GUI, and Java packages.;Other;
+12647;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Xu, Lihao (Primary);No course description is available.;Other;
+12648;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Zhong, Zichun (Primary);No course description is available.;Other;
+12649;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Zhu, Dongxiao (Primary);No course description is available.;Other;
+10036;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Arslanturk, Suzan (Primary);No course description is available.;Other;
+12518;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Bosu, Amiangshu (Primary);No course description is available.;Other;
+12519;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;BROCANELLI, Marco (Primary);No course description is available.;Other;
+13216;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Dong, Ming (Primary);No course description is available.;Other;
+12520;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Dong, Zheng (Primary);No course description is available.;Other;
+12521;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Draghici, Sorin (Primary);No course description is available.;Other;
+12528;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Fisher, Nathan W. (Primary);No course description is available.;Other;
+12529;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Grosu, Daniel (Primary);No course description is available.;Other;
+12530;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Han, Zhizhong (Primary);No course description is available.;Other;
+12531;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Hua, Jing (Primary);No course description is available.;Other;
+12532;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None;Jang, Rhongho (Primary);No course description is available.;Other;
+12533;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None;Kotov, Alexander (Primary);No course description is available.;Other;
+12650;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None;Lu, Shiyong (Primary);No course description is available.;Other;
+12651;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Reynolds, Robert Gene (Primary);No course description is available.;Other;
+12652;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Saifullah, Abusayeed (Primary);No course description is available.;Other;
+12653;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None;Schwiebert, Loren J. (Primary);No course description is available.;Other;
+12654;Master's Thesis Research and Direction
+Individual;CSC8999;09/01/2021;12/21/2021;None
+;Shi, Weisong (Primary);No course description is available.;Other;
+12655;Network, Distributed, and Concurrent Programming
+Lecture;CSC5250;09/01/2021;12/21/2021;Tuesday,Thursday
+;Xu, Lihao (Primary);Fundamental concepts and skills of developing networked, distributed, and concurrent applications. Topics include: inter-process communication, TCP/IP sockets programming, remote method invocation, multithreading, concurrency and synchronization.;Other;
+12656;Parallel Computing I: Programming
+Lecture;CSC6220;09/01/2021;12/21/2021;Monday,Wednesday
+;Zhong, Zichun (Primary);Parallel computing concepts, examples of parallel computers, parallelism in algorithms / data / programs, experiences with state of the art parallel computers.;Other;
+13864;Personal Digital Security
+Lecture;CSC1002;09/01/2021;12/21/2021;None
+;Zhu, Dongxiao (Primary);Students learn how to reduce exposure to risks and how to identify, assess and repair infected devices.;Other;
+15648;Pre-Doctoral Candidacy Research
+Individual;CSC9990;09/01/2021;12/21/2021;None
+;Hua, Jing (Primary);Research in preparation for doctoral dissertation.;Other;
+17195;Principles of Cyber Security
+Lecture;CSC5272;09/01/2021;12/21/2021;None
+;Shi, Weisong (Primary);Addresses the broad range of industry best practices, knowledge, and skills expected of an IT security manager or officer. Students will learn both the theory and the requirements for practical implementation of core security concepts, practices, monitoring, and compliance. Students will also learn to identify and maintain cost-effective security controls that are closely aligned with business requirements and industry standards.;Other;
+10557;Principles of Web Technology
+Lecture;CSC5750;09/01/2021;12/21/2021;Tuesday,Thursday
+;Arslanturk, Suzan (Primary);History and development of the world-wide web. Techniques for authoring static and dynamic content for the world-wide web. Web security techniques. Electronic commerce on the web. Lab exercises required.;Other;
+12657;Problem Solving and Programming
+Lecture;CSC1100;09/01/2021;12/21/2021;Tuesday,Thursday
+;Bosu, Amiangshu (Primary);Problem solving with algorithms, and their realization as computer programs using a structured, general purpose programming language; data types, operators, expressions, assignment, input and output, selection and repetition control structures; modularity and procedural abstraction using functions with parameters; structured data types, arrays, pointers and strings. No credit after CSC 2000.;Other;
+12658;Problem Solving and Programming
+Laboratory;CSC1100;09/01/2021;12/21/2021;Tuesday,Thursday
+;BROCANELLI, Marco (Primary);Problem solving with algorithms, and their realization as computer programs using a structured, general purpose programming language; data types, operators, expressions, assignment, input and output, selection and repetition control structures; modularity and procedural abstraction using functions with parameters; structured data types, arrays, pointers and strings. No credit after CSC 2000.;Other;
+12659;Problem Solving and Programming
+Laboratory;CSC1100;09/01/2021;12/21/2021;Tuesday,Thursday
+;Dong, Ming (Primary);Problem solving with algorithms, and their realization as computer programs using a structured, general purpose programming language; data types, operators, expressions, assignment, input and output, selection and repetition control structures; modularity and procedural abstraction using functions with parameters; structured data types, arrays, pointers and strings. No credit after CSC 2000.;Other;
+12660;Problem Solving and Programming
+Laboratory;CSC1100;09/01/2021;12/21/2021;Tuesday,Thursday
+;Dong, Zheng (Primary);Problem solving with algorithms, and their realization as computer programs using a structured, general purpose programming language; data types, operators, expressions, assignment, input and output, selection and repetition control structures; modularity and procedural abstraction using functions with parameters; structured data types, arrays, pointers and strings. No credit after CSC 2000.;Other;
+12661;Problem Solving and Programming
+Laboratory;CSC1100;09/01/2021;12/21/2021;Tuesday,Thursday
+;Draghici, Sorin (Primary);Problem solving with algorithms, and their realization as computer programs using a structured, general purpose programming language; data types, operators, expressions, assignment, input and output, selection and repetition control structures; modularity and procedural abstraction using functions with parameters; structured data types, arrays, pointers and strings. No credit after CSC 2000.;Other;
+12662;Problem Solving and Programming
+Laboratory;CSC1100;09/01/2021;12/21/2021;Tuesday,Thursday
+;Fisher, Nathan W. (Primary);Problem solving with algorithms, and their realization as computer programs using a structured, general purpose programming language; data types, operators, expressions, assignment, input and output, selection and repetition control structures; modularity and procedural abstraction using functions with parameters; structured data types, arrays, pointers and strings. No credit after CSC 2000.;Other;
+12663;Professional Practice in Computer Science
+Individual;CSC4995;09/01/2021;12/21/2021;None
+;Grosu, Daniel (Primary);Review of computer science practical experiences resulting from participation in the cooperative work-study program.;Other;
+12664;Real-Time and Embedded Operating Systems
+Lecture;CSC6280;09/01/2021;12/21/2021;Tuesday,Thursday
+;Han, Zhizhong (Primary);Operating system design for real-time and embedded systems. Focus on scheduling, synchronization, communication, and process and memory management for time-critical and resource-constrained applications.;Other;
+12665;Senior Capstone Project
+Lecture;CSC4996;09/01/2021;12/21/2021;Tuesday,Thursday
+;Hua, Jing (Primary);Development of skills for planning, managing, implementing, and documenting complex software projects. Project management techniques; software development teams; data management, privacy, and security.;Other;
+12666;Senior Capstone Project
+Laboratory;CSC4996;09/01/2021;12/21/2021;Thursday
+;ang, Rhongho (Primary);Development of skills for planning, managing, implementing, and documenting complex software projects. Project management techniques; software development teams; data management, privacy, and security.;Other;
+12667;Senior Capstone Project
+Lecture;CSC4996;09/01/2021;12/21/2021;Monday,Wednesday
+;Kotov, Alexander (Primary);Development of skills for planning, managing, implementing, and documenting complex software projects. Project management techniques; software development teams; data management, privacy, and security.;Other;
+12668;Senior Capstone Project
+Laboratory;CSC4996;09/01/2021;12/21/2021;Wednesday
+;Lu, Shiyong (Primary);Development of skills for planning, managing, implementing, and documenting complex software projects. Project management techniques; software development teams; data management, privacy, and security.;Other;
+12669;Software Engineering
+Lecture;CSC4110;09/01/2021;12/21/2021;Tuesday,Thursday;Reynolds, Robert Gene (Primary);Software life cycle; software requirement analysis; software system design; software implementation and testing; software maintenance; team programming; ethics and programmers.;Other;
+12670;Software Engineering
+Laboratory;CSC4110;09/01/2021;12/21/2021;Tuesday;Saifullah, Abusayeed (Primary);Software life cycle; software requirement analysis; software system design; software implementation and testing; software maintenance; team programming; ethics and programmers.;Other;
+12671;Software Engineering
+Laboratory;CSC4110;09/01/2021;12/21/2021;Thursday
+;Schwiebert, Loren J. (Primary);Software life cycle; software requirement analysis; software system design; software implementation and testing; software maintenance; team programming; ethics and programmers.;Other;
+12672;Software Engineering
+Lecture;CSC4110;09/01/2021;12/21/2021;Monday
+;Shi, Weisong (Primary);Software life cycle; software requirement analysis; software system design; software implementation and testing; software maintenance; team programming; ethics and programmers.;Other;
+12673;Software Engineering
+Laboratory;CSC4110;09/01/2021;12/21/2021;Wednesday;Xu, Lihao (Primary);Software life cycle; software requirement analysis; software system design; software implementation and testing; software maintenance; team programming; ethics and programmers.;Other;
+12674;Software Engineering
+Lecture;CSC6110;09/01/2021;12/21/2021;Wednesday
+;Zhong, Zichun (Primary);Software process models; advanced software system design; software project management; software analysis; testing and performance analysis; software maintenance; reverse engineering; software reuse; software metrics; object-oriented development.;Other;
+13867;ST: Autonomy Enabled Vehicles
+Lecture;CSC5991;09/01/2021;12/21/2021;Monday,Wednesday
+;Zhu, Dongxiao (Primary);Topics to be announced in the Schedule of Classes.;Other;
+10528;ST: Software Testing
+Lecture;CSC5991;09/01/2021;12/21/2021;Thursday
+;Reynolds, Robert Gene (Primary);Topics to be announced in the Schedule of Classes.;Other;
+10711;ST:Ethical Computer Hacking
+Lecture;CSC5991;09/01/2021;12/21/2021;None
+;Reynolds, Robert Gene (Primary);Topics to be announced in the Schedule of Classes.;Other;
+10905;ST:Intro to Quantum Computing
+Lecture;CSC5991;09/01/2021;12/21/2021;Tuesday,Thursday
+;Reynolds, Robert Gene (Primary);Topics to be announced in the Schedule of Classes.;Other;
+10906;ST:Web Security
+Lecture;CSC5991;09/01/2021;12/21/2021;Monday,Wednesday
+;Reynolds, Robert Gene (Primary);Topics to be announced in the Schedule of Classes.;Other;
+10907;Systems Administration
+Lecture;CSC4320;09/01/2021;12/21/2021;Tuesday,Thursday
+;Reynolds, Robert Gene (Primary);Deployment and maintenance of modern computer systems in an operational environment. Conceptual knowledge and practical experience. Topics include: architectures, heterogeneous systems, authentication and security, network services including firewalls, storage services, performance analysis and tuning, management and configuration of services and system resources, system initialization, drivers, cross-platform services, policies and procedures.;Other;
+10464;Theory of Languages and Automata
+Lecture;CSC6500;09/01/2021;12/21/2021;Monday,Wednesday
+;Reynolds, Robert Gene (Primary);Recursive and recursively enumerable languages; decidability and computability; Rice's theorem; time complexity; space complexity.;Other;
