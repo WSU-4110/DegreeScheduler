@@ -19,6 +19,34 @@ import java.util.Date;
 @Entity
 public class ClassInfo implements Serializable {
 
+    private ClassInfo(int crn, int grade, String className, int classNumber, String startDate, String endDate, String days, String times, String instructor, String description) {
+        this.crn = crn;
+        this.grade = grade;
+        this.className = className;
+        this.classNumber = classNumber;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.days = days;
+        this.times = times;
+        this.instructor = instructor;
+        this.description = description;
+    }
+
+    //here is the singleton instance
+    //we can use this to create a single instance of
+    //the class info class
+    private static ClassInfo singleton = null;
+
+    public static ClassInfo getInstance(){
+        if(singleton == null) {
+            //issues with static classes here but this is the idea
+            //if we were to make this a singleton class
+            singleton = new ClassInfo(crn, grade, className, classNumber,
+                    startDate, endDate, days, times, instructor, description);
+        }
+        return singleton;
+    };
+
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "crn")
     public int crn;
