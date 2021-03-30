@@ -16,6 +16,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+interface Observer{
+    public void update(Sting Activity)
+}
+interface Subject {
+    public void registerObserver(Observer observer);
+    public void removerObserver(Observer observer);
+    public void notifyObservers();
+}
+
 public class LogIn extends AppCompatActivity {
     int loginView = R.layout.activity_login;
     EditText username, password;
