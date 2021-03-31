@@ -37,6 +37,36 @@ public class Register extends AppCompatActivity {
         username = findViewById(R.id.etUsername);
         termsCond = findViewById(R.id.termsConditions);
         wv = findViewById(R.id.webTermsCond);
+        
+        //This is what I added, but dont know if we will use it 
+        //This class adding, deleting classes
+        public class User {
+            private User(Char Username){
+                this.Username = Username;
+        }
+            public Char getUsername () {
+                return this.Username;
+            }
+            
+            public void setName( char Username){
+                this.Username = Username;
+            }
+        }
+        
+     
+            
+            
+            class Subject{
+            public void register (Observer o);
+            public void unregister(Observer o);
+            public void notifyAllObservers(String s);
+        }
+        
+        interface Observer{
+            public void update(String username, String)
+        }
+        
+        //this is where it ends 
 
         button.setOnClickListener(v -> {
             if(emailId.getText().toString().isEmpty()) {
