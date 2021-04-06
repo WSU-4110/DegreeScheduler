@@ -17,7 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Download extends AppCompatActivity {
-
+    //Initializing variables
     private static final int PERMISSION_STORAGE_CODE = 1000;
     EditText mUrlEt;
     Button mDownloadBtn;

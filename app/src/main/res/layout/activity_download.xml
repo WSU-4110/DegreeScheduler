@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Download">
+    //This xml file may not be needed as soon as I connect the download java to the main page button
     <!--EditText: Input Url-->
     <EditText
         android:id="@+id/urlEt"
