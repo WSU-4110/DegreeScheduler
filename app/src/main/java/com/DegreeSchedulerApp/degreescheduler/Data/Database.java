@@ -15,14 +15,14 @@ public class Database {
     private static Database database;
 
     //our app database object
-    private final UserDatabase userDatabase;
+
 
     private final ClassInfoDatabase classInfoDatabase;
 
     private Database(Context context) {
 
         //create the user database
-        userDatabase = Room.databaseBuilder(context, UserDatabase.class, "Users").build();
+
         //create the class information database
         classInfoDatabase = Room.databaseBuilder(context,
                 ClassInfoDatabase.class, "ClassInfo").build();
@@ -36,9 +36,7 @@ public class Database {
         return database;
     }
 
-    public UserDatabase getAppDatabase() {
-        return userDatabase;
-    }
+
 
     public ClassInfoDatabase getClassInfoDatabase() {
         return classInfoDatabase;

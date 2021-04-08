@@ -1,5 +1,6 @@
 package com.DegreeSchedulerApp.degreescheduler.Data;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -19,9 +20,23 @@ import java.util.List;
  */
 @Dao
 public interface ClassInfoDao {
-    @Query("SELECT * FROM ClassInfo")
+
+    //Useful information: https://developer.android.com/training/data-storage/room/accessing-data
+
+    //Queries:
+
+    @Query("SELECT * FROM course_table")
     List<ClassInfo> getAll();
 
+    @Query("SELECT crn, grade, className, classNumber, instructor, times FROM course_table")
+    LiveData<List<ClassInfo>> getBasicClassInformation();
+
+    @Query("SELECT * FROM course_table WHERE crn = :crn")
+    public ClassInfo getItemByCrn(Long crn);
+
+
+
+    //insert, delete and update functions
     @Insert
     void insert(ClassInfo classInfo);
 
@@ -31,12 +46,6 @@ public interface ClassInfoDao {
     @Update
     void update(ClassInfo classInfo);
 
-    @Query("SELECT * FROM classInfo")
-    public List<ClassInfo> getClassInfo();
 
-    @Query("SELECT * FROM classInfo WHERE crn = :crn")
-    public ClassInfo getItemByCrn(Long crn);
-
-    //TODO: Add more queries
 
 }

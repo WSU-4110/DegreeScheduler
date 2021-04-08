@@ -16,8 +16,8 @@ public class PasswordReset extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(passwordResetView);
-        button = findViewById(R.id.restLink);
-        emailId = findViewById(R.id.emailId);
+        button = findViewById(R.id.executeSearch);
+        emailId = findViewById(R.id.courseSearch);
         button.setOnClickListener(v -> {
             if(emailId.getText().toString().isEmpty()) {
                 Toast.makeText(getApplicationContext(),"Enter WSU email address",Toast.LENGTH_SHORT).show();
