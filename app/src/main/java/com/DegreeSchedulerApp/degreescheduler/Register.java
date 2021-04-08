@@ -1,14 +1,12 @@
 package com.DegreeSchedulerApp.degreescheduler;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
-import android.view.View;
+
 import android.os.Build;
 import androidx.annotation.RequiresApi;
 import android.text.InputType;
 import android.webkit.WebView;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Bundle;
@@ -29,7 +27,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(registerView);
         button = findViewById(R.id.signUp);
-        emailId = findViewById(R.id.emailId);
+        emailId = findViewById(R.id.courseSearch);
         password = findViewById(R.id.etPassword);
         confirmPassword = findViewById(R.id.passwordConfirm);
         checkPassword = findViewById(R.id.showPassword);

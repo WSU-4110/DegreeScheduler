@@ -1,5 +1,6 @@
 package com.DegreeSchedulerApp.degreescheduler.Data;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -16,12 +17,13 @@ import java.util.Date;
  * Ryan K
  */
 
-@Entity
+@Entity(tableName = "course_table")
 public class ClassInfo implements Serializable {
 
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "crn")
-    public int crn;
+    @NonNull
+    public String crn;
     //private int grade;
 
     @ColumnInfo(name = "grade")
@@ -31,7 +33,7 @@ public class ClassInfo implements Serializable {
     private String className;
 
     @ColumnInfo(name = "classNumber")
-    private int classNumber;
+    private String classNumber;
 
     @ColumnInfo(name = "start date")
     private String startDate;
@@ -59,11 +61,11 @@ public class ClassInfo implements Serializable {
         this.days = days;
     }
 
-    public int getCrn() {
+    public String getCrn() {
         return crn;
     }
 
-    public void setCrn(int crn) {
+    public void setCrn(String crn) {
         this.crn = crn;
     }
 
@@ -83,11 +85,11 @@ public class ClassInfo implements Serializable {
         this.className = className;
     }
 
-    public int getClassNumber() {
+    public String getClassNumber() {
         return classNumber;
     }
 
-    public void setClassNumber(int classNumber) {
+    public void setClassNumber(String classNumber) {
         this.classNumber = classNumber;
     }
 
