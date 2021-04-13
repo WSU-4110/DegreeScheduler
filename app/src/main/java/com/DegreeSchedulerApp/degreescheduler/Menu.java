@@ -2,6 +2,7 @@ package com.DegreeSchedulerApp.degreescheduler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,10 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         createSched.setOnClickListener(this);
 
         viewDownSched = (Button) findViewById(R.id.btnDownView);
-        viewDownSched.setOnClickListener(this);
+        viewDownSched.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Download.class);
+            startActivity(intent);
+        });
 
         contact = (Button) findViewById(R.id.btnShare);
         contact.setOnClickListener(this);
