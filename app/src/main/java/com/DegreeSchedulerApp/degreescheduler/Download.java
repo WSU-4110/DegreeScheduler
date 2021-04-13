@@ -9,8 +9,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,6 +23,8 @@ public class Download extends AppCompatActivity {
     private static final int PERMISSION_STORAGE_CODE = 1000;
     EditText mUrlEt;
     Button mDownloadBtn;
+    TextView termsConds;
+    WebView wv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,8 @@ public class Download extends AppCompatActivity {
         //initialize views with xml
         mUrlEt = findViewById(R.id.urlEt);
         mDownloadBtn = findViewById(R.id.downloadUrl);
+        termsConds = findViewById(R.id.termsConditions);
+        wv = findViewById(R.id.webTermsCond);
 
         //handle button click
         mDownloadBtn.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +58,9 @@ public class Download extends AppCompatActivity {
                 }
 
             }
+        });
+        termsConds.setOnClickListener(v -> {
+            wv.loadUrl("file:///android_asset/TermsCondition.html");
         });
     }
     private void startDownloading(){
