@@ -44,4 +44,7 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
+    // Required -- JUnit 4 framework
+    testImplementation 'junit:junit:4.13.2'
+
 }
