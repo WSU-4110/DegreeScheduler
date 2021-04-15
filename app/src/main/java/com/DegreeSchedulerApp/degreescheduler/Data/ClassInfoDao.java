@@ -32,8 +32,13 @@ public interface ClassInfoDao {
     LiveData<List<ClassInfo>> getBasicClassInformation();
 
     @Query("SELECT * FROM course_table WHERE crn = :crn")
-    public ClassInfo getItemByCrn(Long crn);
+    ClassInfo getInfoFromCrn(String crn);
 
+    @Query("SELECT crn FROM course_table WHERE crn = :crn")
+    String  getCrn(String crn);
+
+    @Query("SELECT className FROM course_table WHERE className = :name")
+    String  getName(String name);
 
 
     //insert, delete and update functions
