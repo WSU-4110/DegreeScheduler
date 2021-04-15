@@ -17,6 +17,8 @@ public class ClassInfoTest {
     String testName = "test";
 
     @Before
+    //This is required for all the tests to work
+    //Connect to the Rooms database
     public void connectToDb() {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         ClassInfoDatabase classInfoDatabase = Room.databaseBuilder(appContext,
@@ -29,6 +31,9 @@ public class ClassInfoTest {
     //test 1
     @Test
     public void testInsert() {
+        //This test verifies:
+        //1. the method getCrn(String) works
+        //2. the method insert works
 
         ClassInfo classInfo = new ClassInfo();
         classInfo.setCrn(testCrn);
@@ -41,6 +46,11 @@ public class ClassInfoTest {
     //Test 2
     @Test(expected = NullPointerException.class)
     public void testDelete() {
+        //This test verifies:
+        //1. the method getInfoFromCrn works
+        //2. the method delete works
+        //I know this test works when the query returns a null object
+        //because the object was deleted
         ClassInfo classInfo2 = new ClassInfo();
         classInfo2.setCrn(testCrn);
 
@@ -53,6 +63,9 @@ public class ClassInfoTest {
     // test 3
     @Test
     public void testUpdate() {
+        //this test verifies that:
+        //1. the getName(string) method works
+        //2. the update method works
         ClassInfo classInfo = new ClassInfo();
         classInfo.setCrn(testCrn);
         classInfo.setClassName(testName);
@@ -61,13 +74,5 @@ public class ClassInfoTest {
         assert(classInfoDao.getName(testName).equals(testName));
 
     }
-
-
-
-
-
-
-
-
 
 }
