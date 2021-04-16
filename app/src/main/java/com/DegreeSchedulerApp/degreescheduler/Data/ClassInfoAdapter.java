@@ -80,6 +80,7 @@ public class ClassInfoAdapter extends RecyclerView.Adapter<ClassInfoAdapter.View
         public TextView instructor;
         public TextView description;
 
+
         //connects to layout
 
         public ViewHolder(@NonNull View itemView) {
@@ -94,6 +95,13 @@ public class ClassInfoAdapter extends RecyclerView.Adapter<ClassInfoAdapter.View
             times = itemView.findViewById(R.id.times);
             instructor = itemView.findViewById(R.id.instructor);
             description = itemView.findViewById(R.id.description);
+
+            itemView.findViewById(R.id.checkBox2).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                }
+            });
         }
     }
+
 }
