@@ -1,6 +1,8 @@
 package com.example.degreescheduler;
 
 import android.content.Context;
+
+import androidx.room.Query;
 import androidx.room.Room;
 import com.DegreeSchedulerApp.degreescheduler.Data.ClassInfo;
 import com.DegreeSchedulerApp.degreescheduler.Data.ClassInfoDao;
@@ -30,10 +32,16 @@ public class ClassInfoTest {
 
     //test 1
     @Test
-    public void testInsert() {
+    public void testInsertAndCrnQuery() {
         //This test verifies:
         //1. the method getCrn(String) works
         //2. the method insert works
+
+        //@Query("SELECT crn FROM course_table WHERE crn = :crn")
+        //String  getCrn(String crn);
+
+        //@Insert
+        //void insert(ClassInfo classInfo);
 
         ClassInfo classInfo = new ClassInfo();
         classInfo.setCrn(testCrn);
@@ -45,12 +53,19 @@ public class ClassInfoTest {
 
     //Test 2
     @Test(expected = NullPointerException.class)
-    public void testDelete() {
+    public void testDeleteAndgetInfoFromCrnQuery() {
         //This test verifies:
         //1. the method getInfoFromCrn works
         //2. the method delete works
         //I know this test works when the query returns a null object
         //because the object was deleted
+
+        //@Query("SELECT * FROM course_table WHERE crn = :crn")
+        //ClassInfo getInfoFromCrn(String crn);
+
+        //@Delete
+        //void delete(ClassInfo classInfo);
+
         ClassInfo classInfo2 = new ClassInfo();
         classInfo2.setCrn(testCrn);
 
@@ -62,7 +77,7 @@ public class ClassInfoTest {
 
     // test 3
     @Test
-    public void testUpdate() {
+    public void testUpdateAndNameQuery() {
         //this test verifies that:
         //1. the getName(string) method works
         //2. the update method works
@@ -70,6 +85,11 @@ public class ClassInfoTest {
         classInfo.setCrn(testCrn);
         classInfo.setClassName(testName);
 
+        //@Query("SELECT className FROM course_table WHERE className = :name")
+        //String  getName(String name);
+
+        //@Update
+        //void update(ClassInfo classInfo);
         classInfoDao.update(classInfo);
         assert(classInfoDao.getName(testName).equals(testName));
 
