@@ -14,4 +14,15 @@
         tools:layout_editor_absoluteY="0dp" />
 
     <include layout="@layout/course_row" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="125dp"
+        android:layout_height="42dp"
+        android:checked="false"
+        android:duplicateParentState="false"
+        android:text="AddClass"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="488dp"
+        tools:layout_editor_absoluteY="103dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
