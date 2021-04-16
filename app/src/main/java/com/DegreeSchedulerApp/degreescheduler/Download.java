@@ -24,15 +24,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.DegreeSchedulerApp.degreescheduler.databinding.ActivityDownloadBinding;
 
+
 public class Download extends AppCompatActivity {
     //Initializing variables
     ActivityDownloadBinding binding;
     private static final int PERMISSION_STORAGE_CODE = 1000;
     Button downloadBtn;
-    TextView termsConds;
+    TextView termCond;
     CheckBox consent;
     EditText sampleUrl;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +41,7 @@ public class Download extends AppCompatActivity {
 
         //initialize views with xml
         downloadBtn = findViewById(R.id.downloadBtn);
-        termsConds = findViewById(R.id.termsConditions);
+        termCond = findViewById(R.id.termsConditions);
         consent = findViewById(R.id.consentBox);
         sampleUrl = findViewById(R.id.urlText);
         binding.termsConditions.setOnClickListener(new View.OnClickListener() {
