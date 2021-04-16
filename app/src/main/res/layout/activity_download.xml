@@ -1,36 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Download">
-    //This xml file may not be needed as soon as I connect the download java to the main page button
-    <!--EditText: Input Url-->
+    android:background="@drawable/download_bg"
+    tools:context=".Download"
+    android:orientation="vertical">
     <EditText
-        android:id="@+id/urlEt"
-        android:hint="Enter url..."
+        android:id="@+id/urlText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <!--Button: com.DegreeSchedulerApp.degreescheduler.Download file from Url-->
-    <Button
-        android:id="@+id/downloadUrl"
-        android:text="Download"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Note: You would be responsible for distribution of your schedule information."
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal" />
+    <CheckBox
+        android:id="@+id/consentBox"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_gravity="right"
+        android:text="I wish to proceed"/>
+    <Button
+        android:id="@+id/downloadBtn"
+        android:layout_width= "250dp"
+        android:layout_height="wrap_content"
+        android:text="Download"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:textColor="#005e85"
+        android:layout_marginTop="90dp"/>
     <TextView
         android:id="@+id/termsConditions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="600dp"
-        android:layout_marginLeft="135dp"
         android:layout_marginBottom="13dp"
+        android:layout_marginTop="120dp"
         android:clickable="true"
         android:text="Terms and Conditions"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
-</RelativeLayout>
+</LinearLayout>

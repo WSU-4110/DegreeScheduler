@@ -1,8 +1,10 @@
 package com.DegreeSchedulerApp.degreescheduler;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
@@ -10,7 +12,9 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,54 +22,89 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.DegreeSchedulerApp.degreescheduler.databinding.ActivityDownloadBinding;
+
 public class Download extends AppCompatActivity {
     //Initializing variables
+    ActivityDownloadBinding binding;
     private static final int PERMISSION_STORAGE_CODE = 1000;
-    EditText mUrlEt;
-    Button mDownloadBtn;
+    Button downloadBtn;
     TextView termsConds;
-    WebView wv;
+    CheckBox consent;
+    EditText sampleUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_download);
+        binding = ActivityDownloadBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         //initialize views with xml
-        mUrlEt = findViewById(R.id.urlEt);
-        mDownloadBtn = findViewById(R.id.downloadUrl);
+        downloadBtn = findViewById(R.id.downloadBtn);
         termsConds = findViewById(R.id.termsConditions);
-        wv = findViewById(R.id.webTermsCond);
-
-        //handle button click
-        mDownloadBtn.setOnClickListener(new View.OnClickListener() {
+        consent = findViewById(R.id.consentBox);
+        sampleUrl = findViewById(R.id.urlText);
+        binding.termsConditions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.M) {
-                    if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
-                        //permission denied, request it
-                        String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
-                        requestPermissions(permissions, PERMISSION_STORAGE_CODE);
-                    }
-                    else {
-                        //permission already granted, perform download
+                show_dialog();
+            }
+        });
+
+        //handle button click
+        downloadBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(consent.isChecked()) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
+                            //permission denied, request it
+                            String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                            requestPermissions(permissions, PERMISSION_STORAGE_CODE);
+                        } else {
+                            //permission already granted, perform download
+                            startDownloading();
+                        }
+                    } else {
+                        //system os is less than marshmallow, perform download
                         startDownloading();
                     }
                 }
                 else{
-                    //system os is less than marshmallow, perform download
-                    startDownloading();
+                    Toast.makeText(getApplicationContext(), "Check the box to proceed", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
-        termsConds.setOnClickListener(v -> {
-            wv.loadUrl("file:///android_asset/TermsCondition.html");
-        });
+
+    }
+
+    public void show_dialog()
+    {
+        AlertDialog.Builder alert= new AlertDialog.Builder(this);
+
+        WebView wv = new WebView(this);
+        wv.loadUrl("file:///android_asset/TermsCondition.html");
+        wv.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url){
+                view.loadUrl(url);
+                return true;
+        }
+    });
+
+    alert.setView(wv);
+    alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            dialog.dismiss();
+        }
+    });
+    alert.show();
     }
     private void startDownloading(){
         //get url/text from edit text
-        String url = mUrlEt.getText().toString().trim();
+        String url = sampleUrl.getText().toString().trim();
 
         //create download request
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
