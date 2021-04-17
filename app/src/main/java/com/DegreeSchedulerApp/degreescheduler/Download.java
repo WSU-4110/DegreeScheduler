@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Patterns;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -55,29 +56,38 @@ public class Download extends AppCompatActivity {
         downloadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(consent.isChecked()) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
-                            //permission denied, request it
-                            String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
-                            requestPermissions(permissions, PERMISSION_STORAGE_CODE);
+                if(sampleUrl.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Please enter a url!", Toast.LENGTH_SHORT).show();
+                }
+                else if(Patterns.WEB_URL.matcher((sampleUrl.getText().toString())).matches()){
+                    Toast.makeText(getApplicationContext(), "Valid URL!! Please click the checkbox and Download", Toast.LENGTH_SHORT).show();
+                    if (consent.isChecked()) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
+                                //permission denied, request it
+                                String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                                requestPermissions(permissions, PERMISSION_STORAGE_CODE);
+                            } else {
+                                //permission already granted, perform download
+                                startDownloading();
+                            }
                         } else {
-                            //permission already granted, perform download
+                            //system os is less than marshmallow, perform download
                             startDownloading();
                         }
                     } else {
-                        //system os is less than marshmallow, perform download
-                        startDownloading();
+                        Toast.makeText(getApplicationContext(), "Check the box to proceed", Toast.LENGTH_SHORT).show();
                     }
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "Check the box to proceed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Please enter a valid string!", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
 
     }
+
 
     public void show_dialog()
     {
