@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.DegreeSchedulerApp.degreescheduler.R;
 
+import java.util.ArrayList;
 import java.util.List;
 /**
  * This is the adapter for the ClassInfo
@@ -97,6 +98,12 @@ public class ClassInfoAdapter extends RecyclerView.Adapter<ClassInfoAdapter.View
             description = itemView.findViewById(R.id.description);
 
         }
+    }
+
+    public void filteredList(List<ClassInfo> filteredList) {
+        classInfoList = filteredList;
+        notifyDataSetChanged();
+
     }
 
 }
