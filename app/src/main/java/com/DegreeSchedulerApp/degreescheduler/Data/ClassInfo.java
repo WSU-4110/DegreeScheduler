@@ -26,8 +26,8 @@ public class ClassInfo implements Serializable {
     public String crn;
     //private int grade;
 
-    @ColumnInfo(name = "grade")
-    private int grade;
+//    @ColumnInfo(name = "grade")
+//    private int grade;
 
     @ColumnInfo(name = "className")
     private String className;
@@ -69,13 +69,13 @@ public class ClassInfo implements Serializable {
         this.crn = crn;
     }
 
-    public int getGrade() {
-        return grade;
-    }
+//   // public int getGrade() {
+//        return grade;
+//    }
 
-    public void setGrade(int grade) {
-        this.grade = grade;
-    }
+//    public void setGrade(int grade) {
+//        this.grade = grade;
+//    }
 
     public String getClassName() {
         return className;
@@ -137,7 +137,7 @@ public class ClassInfo implements Serializable {
     public String toString() {
         return "ClassInfo{" +
                 "crn=" + crn +
-                ", grade=" + grade +
+                //", grade=" + grade +
                 ", className='" + className + '\'' +
                 ", classNumber=" + classNumber +
                 ", startDate='" + startDate + '\'' +
