@@ -47,7 +47,9 @@ public class LogIn extends AppCompatActivity {
 
             ClassInfoDao classInfoDao = classInfoDatabase.getClassInfoDao();
 
-            classInfoDao.clearTheTable();
+            if(classInfoDao.getAll() != null) {
+                classInfoDao.clearTheTable();
+            }
 
 
             final InputStream file = getAssets().open("classList.txt");
