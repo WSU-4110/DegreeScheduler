@@ -4,11 +4,15 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -19,6 +23,8 @@ import android.widget.Toast;
 import com.DegreeSchedulerApp.degreescheduler.Data.ClassInfo;
 import com.DegreeSchedulerApp.degreescheduler.Data.ClassInfoDao;
 import com.DegreeSchedulerApp.degreescheduler.Data.ClassInfoDatabase;
+import com.DegreeSchedulerApp.degreescheduler.databinding.ActivityDownloadBinding;
+import com.DegreeSchedulerApp.degreescheduler.databinding.ActivityLoginBinding;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,17 +34,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public class LogIn extends AppCompatActivity {
+    ActivityLoginBinding binding;
     int loginView = R.layout.activity_login;
     EditText username, password;
     CheckBox checkPassword;
-    TextView privacy;
-    WebView wv;
+    TextView privacyBtn;
     private Button sigInBtn, button, passwordReset, startDb;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         try {
 
@@ -101,8 +108,7 @@ public class LogIn extends AppCompatActivity {
         button = findViewById(R.id.btnSignUp);
         sigInBtn = findViewById(R.id.btnLogin);
         passwordReset = findViewById(R.id.forgotPassword);
-        privacy = findViewById(R.id.privacy);
-        wv = findViewById(R.id.webPrivacy);
+        privacyBtn = findViewById(R.id.privacy);
         checkPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -133,10 +139,31 @@ public class LogIn extends AppCompatActivity {
             Intent intent = new Intent(this, PasswordReset.class);
             startActivity(intent);
         });
-        privacy.setOnClickListener(v -> {
-            wv.loadUrl("file:///android_asset/privacy.html");
+        binding.privacy.setOnClickListener(v -> {
+                show_dialog();
         });
 
+    }
+    public void show_dialog(){
+        AlertDialog.Builder alert= new AlertDialog.Builder(this);
 
+        WebView wv = new WebView(this);
+        wv.loadUrl("file:///android_asset/privacy.html");
+        wv.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url){
+                view.loadUrl(url);
+                return true;
+            }
+        });
+
+        alert.setView(wv);
+        alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alert.show();
     }
-    }
+}
