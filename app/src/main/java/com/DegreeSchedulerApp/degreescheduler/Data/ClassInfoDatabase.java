@@ -14,7 +14,7 @@ import androidx.room.RoomDatabase;
 
 
 
-@Database(entities = {ClassInfo.class}, version = 1)
+@Database(entities = {ClassInfo.class}, version = 1, exportSchema = false)
 public abstract class ClassInfoDatabase extends RoomDatabase {
     public abstract ClassInfoDao getClassInfoDao();
 

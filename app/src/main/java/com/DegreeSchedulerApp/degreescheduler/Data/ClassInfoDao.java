@@ -31,8 +31,11 @@ public interface ClassInfoDao {
     @Query("SELECT crn, grade, className, classNumber, instructor, times FROM course_table")
     LiveData<List<ClassInfo>> getBasicClassInformation();
 
-    @Query("SELECT * FROM course_table WHERE crn = :crn")
-    public ClassInfo getItemByCrn(Long crn);
+    @Query("SELECT crn, grade, className, classNumber FROM course_table WHERE crn = :crn")
+    ClassInfo getItemByCrn(String crn);
+
+    @Query("DELETE FROM course_table")
+    void clearTheTable();
 
 
 

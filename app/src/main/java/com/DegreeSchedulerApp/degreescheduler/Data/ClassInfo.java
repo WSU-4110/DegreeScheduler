@@ -26,11 +26,13 @@ public class ClassInfo implements Serializable {
     public String crn;
     //private int grade;
 
-    @ColumnInfo(name = "grade")
-    private int grade;
+
 
     @ColumnInfo(name = "className")
     private String className;
+
+    @ColumnInfo(name = "grade")
+    private int grade;
 
     @ColumnInfo(name = "classNumber")
     private String classNumber;
