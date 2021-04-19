@@ -1,8 +1,8 @@
-# DegreeScheduler
-## This is an Android app to create a class schedule
+# DegreeScheduler App
 - Create a schedule
 - Search for classes
 - Download selected classes
+- Send an email for help
 ## Requirements
 - Any computer that supports virtulization 
 - Android studio device emulator
