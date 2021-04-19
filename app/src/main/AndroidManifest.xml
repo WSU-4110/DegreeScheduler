@@ -19,6 +19,7 @@
         <activity android:name=".Register" />
         <activity android:name=".CreateSchedule" android:exported="true"/>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".schedualCreate" android:exported="true"/>
         <activity android:name=".Download" android:exported="true"/>
         <activity android:name=".Menu" android:exported="true"/>
         <activity android:name=".webview" android:exported="true"/>

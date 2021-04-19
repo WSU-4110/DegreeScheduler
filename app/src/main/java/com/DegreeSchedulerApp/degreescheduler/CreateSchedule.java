@@ -1,8 +1,11 @@
 package com.DegreeSchedulerApp.degreescheduler;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,11 +20,12 @@ import com.DegreeSchedulerApp.degreescheduler.Data.ClassInfoDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CreateSchedule extends AppCompatActivity {
+public class CreateSchedule extends AppCompatActivity implements View.OnClickListener
+{
 
     RecyclerView recyclerView;
     ClassInfoAdapter adapter;
-
+    private Button addClass;
     private List<ClassInfo> classInfoList;
 
 
@@ -31,6 +35,13 @@ public class CreateSchedule extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_schedule);
+
+
+        addClass = (Button) findViewById(R.id.addClass);
+        addClass.setOnClickListener(v -> {
+            Intent intent = new Intent(this, schedualCreate.class);
+            startActivity(intent);
+        });
 
         recyclerView = findViewById(R.id.recycler_view);
 
@@ -46,6 +57,8 @@ public class CreateSchedule extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new ClassInfoAdapter(classInfoList);
         recyclerView.setAdapter(adapter);
+
+
 
         EditText editText = findViewById(R.id.edittext);
         editText.addTextChangedListener(new TextWatcher() {
@@ -71,8 +84,9 @@ public class CreateSchedule extends AppCompatActivity {
     }
     private void filter(String txt) {
         ArrayList<ClassInfo> classInfosFilteredList = new ArrayList<>();
+
         for (ClassInfo classInfo : classInfoList){
-            if (classInfo.getClassName().toLowerCase().contains(txt)) {
+            if (classInfo.getClassName().contains(txt)) {
                 classInfosFilteredList.add(classInfo);
             }
             else if (classInfo.getClassNumber().contains(txt)) {
@@ -92,7 +106,15 @@ public class CreateSchedule extends AppCompatActivity {
             else if (classInfo.getEndDate().contains(txt)) {
                 classInfosFilteredList.add(classInfo);
             }
+            else if(classInfo.getCrn().toString().contains(txt)){
+                classInfosFilteredList.add(classInfo);
+            }
         }
         adapter.filteredList(classInfosFilteredList);
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

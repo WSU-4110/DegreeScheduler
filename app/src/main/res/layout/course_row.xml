@@ -65,4 +65,15 @@
         android:textSize="12sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/addClass"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@color/white"
+        android:text="Add Class"
+        android:textColor="#03814B"
+        android:textStyle="bold"
+         />
 </LinearLayout>
