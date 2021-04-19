@@ -17,7 +17,11 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_menu);
 
         createSched = (Button) findViewById(R.id.btnCreate);
-        createSched.setOnClickListener(this);
+        createSched.setOnClickListener(v -> {
+            Intent intent = new Intent(this, CreateSchedule.class);
+            startActivity(intent);
+        });
+        //createSched.setOnClickListener(this);
 
         viewDownSched = (Button) findViewById(R.id.btnDownView);
         viewDownSched.setOnClickListener(v -> {
@@ -26,8 +30,11 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         });
 
         contact = (Button) findViewById(R.id.btnShare);
-        contact.setOnClickListener(this);
+        contact.setOnClickListener(v -> {
+            Intent intent = new Intent(this, webview.class);
+            startActivity(intent);
 
+        });
     }
 
     @Override
