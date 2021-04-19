@@ -20,7 +20,8 @@
         <activity android:name=".CreateSchedule" android:exported="true"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".Download" android:exported="true"/>
-        <activity android:name=".webview"/>
+        <activity android:name=".Menu" android:exported="true"/>
+        <activity android:name=".webview" android:exported="true"/>
 
         <activity android:name=".LogIn">
             <intent-filter>

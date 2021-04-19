@@ -16,7 +16,7 @@ public class webview extends AppCompatActivity {
 
         webView = (WebView) findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("http://www.outlook.office365.com");
+        webView.loadUrl("https://outlook.office.com/");
     }
 
     @Override
