@@ -10,13 +10,11 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.Patterns;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,11 +27,12 @@ import com.DegreeSchedulerApp.degreescheduler.databinding.ActivityDownloadBindin
 public class Download extends AppCompatActivity {
     //Initializing variables
     ActivityDownloadBinding binding;
-    private static final int PERMISSION_STORAGE_CODE = 1000;
+    private static final int PERMISSION_STORAGE_CODE = 100;
     Button downloadBtn;
     TextView termCond;
     CheckBox consent;
-    EditText sampleUrl;
+    public static final String imageUrl ="https://th.bing.com/th/id/R7352f102bef51d03dd39181513831cea?rik=TYsBpvy3k15xiQ&pid=ImgRaw";
+    String imageName = "SampleSchedule.png";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,13 +40,14 @@ public class Download extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         //initialize views with xml
-        downloadBtn = findViewById(R.id.downloadBtn);
+        downloadBtn = findViewById(R.id.download_Btn);
         termCond = findViewById(R.id.termsConditions);
         consent = findViewById(R.id.consentBox);
-        sampleUrl = findViewById(R.id.urlText);
+
         binding.termsConditions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 show_dialog();
             }
         });
@@ -56,31 +56,25 @@ public class Download extends AppCompatActivity {
         downloadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(sampleUrl.getText().toString().isEmpty()){
-                    Toast.makeText(getApplicationContext(), "Please enter a url!", Toast.LENGTH_SHORT).show();
-                }
-                else if(Patterns.WEB_URL.matcher((sampleUrl.getText().toString())).matches()){
-                    Toast.makeText(getApplicationContext(), "Valid URL!! Please click the checkbox and Download", Toast.LENGTH_SHORT).show();
-                    if (consent.isChecked()) {
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                            if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
-                                //permission denied, request it
-                                String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
-                                requestPermissions(permissions, PERMISSION_STORAGE_CODE);
-                            } else {
-                                //permission already granted, perform download
-                                startDownloading();
-                            }
-                        } else {
-                            //system os is less than marshmallow, perform download
-                            startDownloading();
+                if (consent.isChecked()) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
+                            //permission denied, request it
+                            String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                            requestPermissions(permissions, PERMISSION_STORAGE_CODE);
                         }
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Check the box to proceed", Toast.LENGTH_SHORT).show();
+                        else {
+                            //permission already granted, perform download
+                            startDownloading(imageUrl, imageName);
+                        }
+                    }
+                    else {
+                        //system os is less than marshmallow, perform download
+                        startDownloading(imageUrl, imageName);
                     }
                 }
-                else{
-                    Toast.makeText(getApplicationContext(), "Please enter a valid string!", Toast.LENGTH_SHORT).show();
+                else {
+                    Toast.makeText(getApplicationContext(), "Check the box to proceed", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -88,6 +82,39 @@ public class Download extends AppCompatActivity {
 
     }
 
+    private void startDownloading(String url, String outputFileName){
+
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+        request.setTitle(imageName);
+        request.setDescription("Downloading" + imageName);
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.allowScanningByMediaScanner();
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, outputFileName);
+        DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+        manager.enqueue(request);
+    }
+
+
+    //handle permission result
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode){
+            case PERMISSION_STORAGE_CODE: {
+                if (grantResults.length > 0 && grantResults[0] ==
+                        PackageManager.PERMISSION_GRANTED){
+                    Toast.makeText(this, "Permission granted!", Toast.LENGTH_SHORT).show();
+                    //permission granted from popup, performed download
+                    startDownloading(imageUrl,imageName);
+                }
+                else{
+                    //permission denied from popup, show error message
+                    Toast.makeText(this, "Permission denied..!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+    }
 
     public void show_dialog()
     {
@@ -100,56 +127,16 @@ public class Download extends AppCompatActivity {
             public boolean shouldOverrideUrlLoading(WebView view, String url){
                 view.loadUrl(url);
                 return true;
-        }
-    });
-
-    alert.setView(wv);
-    alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            dialog.dismiss();
-        }
-    });
-    alert.show();
-    }
-    private void startDownloading(){
-        //get url/text from edit text
-        String url = sampleUrl.getText().toString().trim();
-
-        //create download request
-        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-        //allow types of network to download files
-        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI |
-                DownloadManager.Request.NETWORK_MOBILE);
-        request.setTitle("com.DegreeSchedulerApp.degreescheduler.Download"); //set title in download notification
-        request.setDescription("Downloading Schedule..."); //set description in download notification
-
-        request.allowScanningByMediaScanner();
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, ""+ System.currentTimeMillis());// get current timestamp as file name
-
-        //get download service and enque file
-        DownloadManager manager = (DownloadManager)getSystemService(Context.DOWNLOAD_SERVICE);
-        manager.enqueue(request);
-    }
-
-    //handle permission result
-
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
-            case PERMISSION_STORAGE_CODE: {
-                if (grantResults.length > 0 && grantResults[0] ==
-                        PackageManager.PERMISSION_GRANTED){
-                    //permission granted from popup, performed download
-                    startDownloading();
-                }
-                else{
-                    //permission denied from popup, show error message
-                    Toast.makeText(this, "Permission denied..!", Toast.LENGTH_SHORT).show();
-                }
             }
-        }
+        });
+
+        alert.setView(wv);
+        alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alert.show();
     }
 }

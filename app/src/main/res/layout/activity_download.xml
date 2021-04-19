@@ -8,10 +8,6 @@
     tools:context=".Download"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/urlText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,10 +23,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
+        android:padding="15dp"
+        android:textSize="15sp"
         android:layout_gravity="right"
-        android:text="I wish to proceed"/>
+        android:text="I agree and wish to proceed"/>
     <Button
-        android:id="@+id/downloadBtn"
+        android:id="@+id/download_Btn"
         android:layout_width= "250dp"
         android:layout_height="wrap_content"
         android:text="Download"
