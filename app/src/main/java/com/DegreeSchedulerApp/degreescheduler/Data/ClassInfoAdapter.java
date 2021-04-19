@@ -96,11 +96,6 @@ public class ClassInfoAdapter extends RecyclerView.Adapter<ClassInfoAdapter.View
             instructor = itemView.findViewById(R.id.instructor);
             description = itemView.findViewById(R.id.description);
 
-            itemView.findViewById(R.id.checkBox2).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                }
-            });
         }
     }
 

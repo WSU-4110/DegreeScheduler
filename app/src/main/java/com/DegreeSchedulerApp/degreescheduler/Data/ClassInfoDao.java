@@ -28,11 +28,11 @@ public interface ClassInfoDao {
     @Query("SELECT * FROM course_table")
     List<ClassInfo> getAll();
 
-    @Query("SELECT crn, grade, className, classNumber, instructor, times FROM course_table")
+    @Query("SELECT crn, className, classNumber, instructor, times FROM course_table")
     LiveData<List<ClassInfo>> getBasicClassInformation();
 
-    @Query("SELECT * FROM course_table WHERE crn = :crn")
-    public ClassInfo getItemByCrn(Long crn);
+    @Query("SELECT crn, className, classNumber FROM course_table WHERE crn = :crn")
+    ClassInfo getItemByCrn(String crn);
 
 
 
