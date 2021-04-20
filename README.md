@@ -13,7 +13,7 @@
 - Sync the project's Gradel Files
 - Run the app using the app configuration
 
-##Firebase code implementation (for user logging in)
+## Firebase code implementation (for user logging in)
 https://github.com/WSU-4110/DegreeSchedulerAppFinal
 
 ### Team members
