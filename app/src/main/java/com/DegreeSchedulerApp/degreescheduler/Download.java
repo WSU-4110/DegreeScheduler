@@ -10,6 +10,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.TextUtils;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -23,16 +25,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.DegreeSchedulerApp.degreescheduler.databinding.ActivityDownloadBinding;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+
 
 public class Download extends AppCompatActivity {
     //Initializing variables
     ActivityDownloadBinding binding;
     private static final int PERMISSION_STORAGE_CODE = 100;
-    Button downloadBtn;
-    TextView termCond;
+    Button downloadBtn, loadBtn;
+    TextView termCond, classView;
     CheckBox consent;
-    public static final String textUrl ="/data/data/com.example.degreescheduler/files/File.txt";
-    String imageName = "SampleSchedule.png";
+    String fileName = "Schedule";
+    String content = "";
+    //String yourFilePath = context.getFilesDir() + "/" + "File.txt";
+    //File textUrl = new File( yourFilePath );
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +52,11 @@ public class Download extends AppCompatActivity {
 
         //initialize views with xml
         downloadBtn = findViewById(R.id.download_Btn);
+        loadBtn = findViewById(R.id.load_Btn);
         termCond = findViewById(R.id.termsConditions);
         consent = findViewById(R.id.consentBox);
+        classView = (TextView)findViewById(R.id.classText);
+        classView.setMovementMethod(new ScrollingMovementMethod());
 
         binding.termsConditions.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,50 +66,90 @@ public class Download extends AppCompatActivity {
             }
         });
 
+        loadBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                readText();
+            }
+        });
         //handle button click
         downloadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (consent.isChecked()) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
-                            //permission denied, request it
-                            String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
-                            requestPermissions(permissions, PERMISSION_STORAGE_CODE);
-                        }
-                        else {
-                            //permission already granted, perform download
-                            startDownloading(textUrl, imageName);
-                        }
-                    }
-                    else {
-                        //system os is less than marshmallow, perform download
-                        startDownloading(textUrl, imageName);
-                    }
+                if(TextUtils.isEmpty(classView.getText().toString())){
+                    Toast.makeText(getApplicationContext(), "Click the Load button to enter class information", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(getApplicationContext(), "Check the box to proceed", Toast.LENGTH_SHORT).show();
+                    String content = classView.getText().toString();
+                    if (consent.isChecked()) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
+                                //permission denied, request it
+                                String[] permissions = {Manifest.permission.READ_EXTERNAL_STORAGE};
+                                requestPermissions(permissions, PERMISSION_STORAGE_CODE);
+                            } else {
+                                //permission already granted
+                                saveText(fileName, content);
+                            }
+                        } else {
+                            //system os is less than marshmallow
+                            saveText(fileName, content);
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Check the box to proceed", Toast.LENGTH_SHORT).show();
+                    }
                 }
-
             }
         });
 
     }
 
-    private void startDownloading(String url, String outputFileName){
 
-        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-        request.setTitle(imageName);
-        request.setDescription("Downloading" + imageName);
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.allowScanningByMediaScanner();
-        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, outputFileName);
-        DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-        manager.enqueue(request);
+    //handle permission result
+    private void readText(){
+            File file = new File( "/data/data/com.example.degreescheduler/files/File.txt");
+            if (!file.exists()){
+                Toast.makeText(getApplicationContext(), "Please add classes using create schedule", Toast.LENGTH_SHORT).show();
+            }
+            String line = null;
+            //Read text from file
+            //StringBuilder text = new StringBuilder();
+            try {
+                BufferedReader br = new BufferedReader(new FileReader(file));
+                line = br.readLine();
+            }
+            catch (IOException e) {
+                Toast.makeText(getApplicationContext(), "Error when reading the file", Toast.LENGTH_SHORT).show();
+            }
+            loadText(line);
     }
 
 
-    //handle permission result
+    private void loadText(String line){
+        if(line.length()>0){
+            classView.setText(line);
+        }
+    }
+
+    private void saveText(String fileName, String content){
+        String filename = fileName + ".txt";
+        File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), filename);
+
+        try{
+            FileOutputStream fos = new FileOutputStream(file);
+            fos.write(content.getBytes());
+            fos.close();
+            Toast.makeText(this,"Saved!",Toast.LENGTH_SHORT).show();
+        }catch (FileNotFoundException e){
+            e.printStackTrace();
+            Toast.makeText(this,"File not found!",Toast.LENGTH_SHORT).show();
+        }catch (IOException e){
+            e.printStackTrace();
+            Toast.makeText(this,"Error saving the file!",Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
 
 
     @Override
@@ -106,7 +160,7 @@ public class Download extends AppCompatActivity {
                         PackageManager.PERMISSION_GRANTED){
                     Toast.makeText(this, "Permission granted!", Toast.LENGTH_SHORT).show();
                     //permission granted from popup, performed download
-                    startDownloading(textUrl,imageName);
+                    saveText(fileName, content);
                 }
                 else{
                     //permission denied from popup, show error message
