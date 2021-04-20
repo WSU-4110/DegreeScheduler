@@ -31,6 +31,6 @@ https://github.com/WSU-4110/DegreeSchedulerAppFinal
 </p>
 <p float="left">
   <img src="https://github.com/WSU-4110/DegreeScheduler/blob/main/images/create_image.png" width="200" />
-  <img src="https://github.com/WSU-4110/DegreeScheduler/blob/main/images/search_image.png" width="200" /> 
+  <img src="https://github.com/WSU-4110/DegreeScheduler/blob/main/images/searchclass_image.png" width="200" /> 
   <img src="https://github.com/WSU-4110/DegreeScheduler/blob/main/images/download_image.png" width="200" /> 
 </p>
