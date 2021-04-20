@@ -41,7 +41,6 @@ public class Download extends AppCompatActivity {
     TextView termCond, classView;
     CheckBox consent;
     String fileName = "Schedule";
-    String content = "";
     //String yourFilePath = context.getFilesDir() + "/" + "File.txt";
     //File textUrl = new File( yourFilePath );
     @Override
@@ -89,11 +88,11 @@ public class Download extends AppCompatActivity {
                                 requestPermissions(permissions, PERMISSION_STORAGE_CODE);
                             } else {
                                 //permission already granted
-                                saveText(fileName, content);
+                                saveText(fileName);
                             }
                         } else {
                             //system os is less than marshmallow
-                            saveText(fileName, content);
+                            saveText(fileName);
                         }
                     } else {
                         Toast.makeText(getApplicationContext(), "Check the box to proceed", Toast.LENGTH_SHORT).show();
@@ -103,7 +102,6 @@ public class Download extends AppCompatActivity {
         });
 
     }
-
 
     //handle permission result
     private void readText(){
@@ -131,24 +129,27 @@ public class Download extends AppCompatActivity {
         }
     }
 
-    private void saveText(String fileName, String content){
+    private void saveText(String fileName){
         String filename = fileName + ".txt";
-        File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), filename);
-
-        try{
-            FileOutputStream fos = new FileOutputStream(file);
+        String content = classView.getText().toString();
+        FileOutputStream fos = null;
+        try {
+            fos = openFileOutput(filename, MODE_PRIVATE);
             fos.write(content.getBytes());
-            fos.close();
-            Toast.makeText(this,"Saved!",Toast.LENGTH_SHORT).show();
-        }catch (FileNotFoundException e){
+            Toast.makeText(this, "Saved to "+ getFilesDir()+ "/" + filename, Toast.LENGTH_LONG).show();
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
-            Toast.makeText(this,"File not found!",Toast.LENGTH_SHORT).show();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(this,"Error saving the file!",Toast.LENGTH_SHORT).show();
+        }finally {
+            if(fos != null){
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
-
-
     }
 
 
@@ -160,7 +161,7 @@ public class Download extends AppCompatActivity {
                         PackageManager.PERMISSION_GRANTED){
                     Toast.makeText(this, "Permission granted!", Toast.LENGTH_SHORT).show();
                     //permission granted from popup, performed download
-                    saveText(fileName, content);
+                    saveText(fileName);
                 }
                 else{
                     //permission denied from popup, show error message
