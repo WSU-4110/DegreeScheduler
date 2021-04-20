@@ -2,10 +2,13 @@ package com.DegreeSchedulerApp.degreescheduler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Build;
 import androidx.annotation.RequiresApi;
 import android.text.InputType;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,17 +16,21 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.DegreeSchedulerApp.degreescheduler.databinding.ActivityRegisterBinding;
+
 public class Register extends AppCompatActivity {
+    ActivityRegisterBinding binding;
     int registerView = R.layout.activity_register;
     Button button;
     EditText username, emailId, password, confirmPassword;
     CheckBox checkPassword, privacy;
     String emailPattern = "[a-zA-Z0-9._-]+@wayne+\\.edu+";
     TextView termsCond;
-    WebView wv;
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        binding = ActivityRegisterBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         super.onCreate(savedInstanceState);
         setContentView(registerView);
         button = findViewById(R.id.signUp);
@@ -34,7 +41,6 @@ public class Register extends AppCompatActivity {
         privacy = findViewById(R.id.checkBox);
         username = findViewById(R.id.etUsername);
         termsCond = findViewById(R.id.termsConditions);
-        wv = findViewById(R.id.webTermsCond);
 
         button.setOnClickListener(v -> {
             if(emailId.getText().toString().isEmpty()) {
@@ -84,8 +90,30 @@ public class Register extends AppCompatActivity {
                 confirmPassword.setInputType(129);
             }
         });
-        termsCond.setOnClickListener(v -> {
-            wv.loadUrl("file:///android_asset/TermsCondition.html");
+        binding.termsConditions.setOnClickListener(v -> {
+            show_dialog();
         });
+    }
+    public void show_dialog(){
+        AlertDialog.Builder alert= new AlertDialog.Builder(this);
+
+        WebView wv = new WebView(this);
+        wv.loadUrl("file:///android_asset/TermsCondition.html");
+        wv.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url){
+                view.loadUrl(url);
+                return true;
+            }
+        });
+
+        alert.setView(wv);
+        alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alert.show();
     }
 }
