@@ -24,12 +24,18 @@ public class schedualCreate extends AppCompatActivity implements View.OnClickLis
     EditText textView;
     Button button;
     @Override
+
+    //onCreate is used to start activity
+    //super is used to call the parent class constructor
+    //setContentView is used to call xml file
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedualcreate);
+        //Access the database
         ClassInfoDatabase classInfoDatabase = Room.databaseBuilder(this,
                 ClassInfoDatabase.class,
                 "CLASS_INFO.db").allowMainThreadQueries().build();
+        //Query the class info
         ClassInfoDao classInfoDao = classInfoDatabase.getClassInfoDao();
 
 
@@ -38,16 +44,17 @@ public class schedualCreate extends AppCompatActivity implements View.OnClickLis
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
+
             public void onClick(View v)  {
                 crn = textView.getText().toString();
                 showToast(crn + " Was the selected Crn");
-               /* course.getCrn();
-                course.getClassName();
-                course.getClassNumber();*/
+
+                //Retrieve class info
                 ClassInfo course = classInfoDao.getItemByCrn(crn);
                 System.out.println(course.getCrn());
                 System.out.println(course.getClassName());
                 System.out.println(course.getClassNumber());
+                //Adds class info to File
                 try {
                     FileOutputStream fileout=openFileOutput("File.txt", MODE_PRIVATE);
                     OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
