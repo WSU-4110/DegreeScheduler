@@ -15,8 +15,10 @@ public class webview extends AppCompatActivity {
         setContentView(R.layout.activity_webview);
 
         webView = (WebView) findViewById(R.id.webview);
+        webView.getSettings().setJavaScriptEnabled(true);
+
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://outlook.office.com/");
+        webView.loadUrl("https://login.wayne.edu/?destination_url=https://webmail.wayne.edu/");
     }
 
     @Override
