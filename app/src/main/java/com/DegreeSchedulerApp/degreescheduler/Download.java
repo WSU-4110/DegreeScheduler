@@ -31,7 +31,7 @@ public class Download extends AppCompatActivity {
     Button downloadBtn;
     TextView termCond;
     CheckBox consent;
-    public static final String imageUrl ="https://th.bing.com/th/id/R7352f102bef51d03dd39181513831cea?rik=TYsBpvy3k15xiQ&pid=ImgRaw";
+    public static final String textUrl ="/data/data/com.example.degreescheduler/files/File.txt";
     String imageName = "SampleSchedule.png";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +65,12 @@ public class Download extends AppCompatActivity {
                         }
                         else {
                             //permission already granted, perform download
-                            startDownloading(imageUrl, imageName);
+                            startDownloading(textUrl, imageName);
                         }
                     }
                     else {
                         //system os is less than marshmallow, perform download
-                        startDownloading(imageUrl, imageName);
+                        startDownloading(textUrl, imageName);
                     }
                 }
                 else {
@@ -106,7 +106,7 @@ public class Download extends AppCompatActivity {
                         PackageManager.PERMISSION_GRANTED){
                     Toast.makeText(this, "Permission granted!", Toast.LENGTH_SHORT).show();
                     //permission granted from popup, performed download
-                    startDownloading(imageUrl,imageName);
+                    startDownloading(textUrl,imageName);
                 }
                 else{
                     //permission denied from popup, show error message
