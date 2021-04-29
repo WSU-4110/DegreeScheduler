@@ -91,6 +91,10 @@ public class UnitTests {
     }
 
 
+    // Vi's Unit Tests:
+    // 3 for email verification and 3 for password reset
+
+
     // These tests pertain to email verification and the authentication of users
 
     Boolean isVerified = true;
@@ -154,43 +158,44 @@ public class UnitTests {
 
 
 
-         @Test
-         public void testclassName () {
+    @Test
+    public void testclassName () {
              ClassInfo classInfo = new ClassInfo();
              classInfo.setClassName("Name");
              assert (classInfo.getClassName().equals("Name"));
-         }
+    }
 
 
-         @Test
-         public void testclassNumber () {
+    @Test
+    public void testclassNumber () {
              ClassInfo classInfo = new ClassInfo();
              classInfo.setClassNumber("Number");
              assert (classInfo.getClassNumber().equals("Number"));
-         }
+    }
 
-         @Test
-         public void teststartDate () {
+    @Test
+    public void teststartDate () {
              ClassInfo classInfo = new ClassInfo();
              classInfo.setStartDate("Date");
              assert (classInfo.getStartDate().equals("Date"));
 
-         }
-         @Test
-         public void testendDate () {
+    }
+
+    @Test
+    public void testendDate () {
              ClassInfo classInfo = new ClassInfo();
              classInfo.setEndDate("End Date");
              assert (classInfo.getEndDate().equals("End Date"));
 
-         }
+    }
 
-         @Test
-         public void testdays () {
+    @Test
+    public void testdays () {
              ClassInfo classInfo = new ClassInfo();
              classInfo.setDays("Days");
              assert (classInfo.getDays().equals("Days"));
 
-         }
+    }
 
-     }
+}
 
