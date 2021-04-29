@@ -30,8 +30,10 @@ public class UnitTests {
 
     }
 
+    ClassInfo classInfo = new ClassInfo();
 
-    //test 1
+
+    //Ryan's tests
     @Test
     public void testInsertAndCrnQuery() {
         //This test verifies:
@@ -46,13 +48,58 @@ public class UnitTests {
 
         classInfoDao.clearTheTable();
 
-        ClassInfo classInfo = new ClassInfo();
+
         classInfo.setCrn(testCrn);
 
         classInfoDao.insert(classInfo);
-        assert(classInfoDao.getCrn(testCrn).equals(testCrn));
-
+        assert (classInfoDao.getCrn(testCrn).equals(testCrn));
     }
+
+
+
+        @Test(expected = NullPointerException.class)
+        public void testUpdateAndNameQuery() {
+            //this test verifies that:
+            //1. the getName(string) method works
+            //2. the update method works
+
+
+            classInfo.setClassName(testName);
+
+            //@Query("SELECT className FROM course_table WHERE className = :name")
+            //String  getName(String name);
+
+            //@Update
+            //void update(ClassInfo classInfo);
+            classInfoDao.update(classInfo);
+            assert(classInfoDao.getName(testName).equals(testName));
+
+        }
+
+
+        @Test(expected = NullPointerException.class)
+        public void testDeleteAndgetInfoFromCrnQuery() {
+            //This test verifies:
+            //1. the method getInfoFromCrn works
+            //2. the method delete works
+            //I know this test works when the query returns a null object
+            //because the object was deleted
+
+            //@Query("SELECT * FROM course_table WHERE crn = :crn")
+            //ClassInfo getInfoFromCrn(String crn);
+
+            //@Delete
+            //void delete(ClassInfo classInfo);
+
+            ClassInfo classInfo2 = new ClassInfo();
+            classInfo2.setCrn(testCrn);
+
+            classInfoDao.delete(classInfo2);
+            assert(classInfoDao.getInfoFromCrn(testCrn).equals(classInfo2));
+
+        }
+
+
 //Kassems Part
     String email1 = "Faraj54@gmail.com";
     String email2 = "gx9397@wayne.edu";

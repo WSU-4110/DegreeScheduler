@@ -34,8 +34,14 @@ public interface ClassInfoDao {
     @Query("SELECT crn, grade, className, classNumber FROM course_table WHERE crn = :crn")
     ClassInfo getItemByCrn(String crn);
 
+    @Query("SELECT * FROM course_table WHERE crn = :crn")
+    ClassInfo getInfoFromCrn(String crn);
+
     @Query("SELECT crn FROM course_table WHERE crn = :crn")
     String  getCrn(String crn);
+
+    @Query("SELECT className FROM course_table WHERE className = :name")
+    String  getName(String name);
 
     @Query("DELETE FROM course_table")
     void clearTheTable();
