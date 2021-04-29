@@ -6,6 +6,7 @@ import androidx.test.InstrumentationRegistry;
 import com.DegreeSchedulerApp.degreescheduler.Data.ClassInfo;
 import com.DegreeSchedulerApp.degreescheduler.Data.ClassInfoDao;
 import com.DegreeSchedulerApp.degreescheduler.Data.ClassInfoDatabase;
+import com.DegreeSchedulerApp.degreescheduler.Register;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -16,6 +17,7 @@ public class UnitTests {
     private ClassInfoDatabase classInfoDatabase;
     String testCrn = "0";
     String testName = "test";
+
 
     @Before
     //This is required for all the tests to work
@@ -64,12 +66,12 @@ public class UnitTests {
     @Test
     public void check_if_passwords_match()
     {
-        Assert.assertEquals("Passwords Don't Match",passWd1, passWd2); //check if passwords match.
+        Assert.assertNotSame("Passwords Don't Match",passWd1, passWd2); //check if passwords match.
         System.out.println("Passwords match");
     }
     @Test
     public void check_if_emails_match(){
-        Assert.assertEquals("Emails Dont't match",email1, email2); // check if emails match.
+        Assert.assertNotSame("Emails Dont't match",email1, email2); // check if emails match.
         System.out.println("Emails match");
     }
     @Test
