@@ -91,6 +91,10 @@ public class UnitTests {
     }
 
 
+    // Vi's Unit Tests:
+    // 3 for email verification and 3 for password reset
+
+
     // These tests pertain to email verification and the authentication of users
 
     Boolean isVerified = true;
@@ -154,96 +158,44 @@ public class UnitTests {
 
 //Ciah Green
 
-         @Test
-         public void testclassName () {
+    @Test
+    public void testclassName () {
              ClassInfo classInfo = new ClassInfo();
              classInfo.setClassName("Name");
              assert (classInfo.getClassName().equals("Name"));
-         }
+    }
 
 
-         @Test
-         public void testclassNumber () {
+    @Test
+    public void testclassNumber () {
              ClassInfo classInfo = new ClassInfo();
              classInfo.setClassNumber("Number");
              assert (classInfo.getClassNumber().equals("Number"));
-         }
+    }
 
-         @Test
-         public void teststartDate () {
+    @Test
+    public void teststartDate () {
              ClassInfo classInfo = new ClassInfo();
              classInfo.setStartDate("Date");
              assert (classInfo.getStartDate().equals("Date"));
 
-         }
-         @Test
-         public void testendDate () {
+    }
+
+    @Test
+    public void testendDate () {
              ClassInfo classInfo = new ClassInfo();
              classInfo.setEndDate("End Date");
              assert (classInfo.getEndDate().equals("End Date"));
 
-         }
+    }
 
-         @Test
-         public void testdays () {
+    @Test
+    public void testdays () {
              ClassInfo classInfo = new ClassInfo();
              classInfo.setDays("Days");
              assert (classInfo.getDays().equals("Days"));
 
-         }
-
-     //Santhra's Part Download page test
-    String sampleUrl = "https://th.bing.com/th/id/OIP.4bT2h9cpzSZqHrKm4TxuLwHaBu?pid=ImgDet&rs=1";
-    String emptyUrl = "";
-    String invalidUrl = "abc";
-    Boolean checkedBox = true;
-    Boolean notCheckedBox = false;
-    Boolean allow = true;
-    Boolean deny = false;
-
-
-    @Test
-    public void editTextEmpty() {
-        Assert.assertNotEquals(sampleUrl, emptyUrl); //check if url is empty.
-        System.out.println("Please enter a url!");
     }
 
-    @Test
-    public void editTextInvalid(){
-        Assert.assertNotSame(sampleUrl, invalidUrl); //check if url does not match.
-        System.out.println("Please enter a valid url!");
-    }
-
-    @Test
-    public void editTextValid(){
-        Assert.assertSame(sampleUrl,sampleUrl); //check if url match.
-        System.out.println("Valid URL!! Please click the checkbox and Download");
-    }
-
-    @Test
-    public void checkButtonNotChecked(){
-        Assert.assertTrue(checkedBox);//check if checkbox is not checked
-        System.out.println("Check box is not checked");
-    }
-
-    @Test
-    public void checkButtonChecked(){
-
-        Assert.assertFalse(notCheckedBox);//check if checkbox is checked
-        System.out.println("Check box is checked");
-    }
-
-    @Test
-    public void permissionGranted() {
-        Assert.assertTrue(allow);//check if permission is granted
-        System.out.println("Permission granted!");
-    }
-
-    @Test
-    public void permissionDenied() {
-        Assert.assertFalse(deny);//check if permission is not granted
-        System.out.println("Permission denied..!");
-    }
-
-    }
+}
 
