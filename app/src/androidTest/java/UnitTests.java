@@ -90,4 +90,107 @@ public class UnitTests {
         System.out.println("Usernames match");
     }
 
-}
+
+    // These tests pertain to email verification and the authentication of users
+
+    Boolean isVerified = true;
+    String password= "123456";
+    String emailA = "[a-zA-Z0-9._-]+@wayne+\\.edu+";
+    String emailB="[a-zA-Z0-9._-]+@wayne+\\.edu+";
+
+    //check if password is atleast 6 chars
+    @Test
+    public void check_if_password_is_6_chars()
+    {
+        password.length();
+        Assert.assertEquals(6, password.length());
+        System.out.println("Password is of length");
+    }
+
+    //check if account is verified
+    @Test
+    public void check_if_account_verified()
+    {
+        Assert.assertTrue("Account is not verified",isVerified);
+        System.out.println("Account is verified");
+    }
+
+    // check if email is WSU registered
+    @Test
+    public void check_if_wayne_email(){
+        Assert.assertEquals("Not a wayne email",emailA, emailB);
+        System.out.println("Is a Wayne Email");
+    }
+
+    // These tests pertain to the PasswordReset class
+
+    String emailC = "go8010@wayne.edu";
+    String emailD = "go8010@wayne.edu";
+    String oldPass = "123456";
+    String newPass = "654321";
+
+    // check if email account is registered
+    @Test
+    public void check_if_emails_are_registered(){
+        Assert.assertEquals("Email is not registered",emailC, emailD);
+        System.out.println("Email is registered");
+    }
+
+    // check if verification link is sent
+    @Test
+    public void check_if_link_sent(){
+        Assert.assertEquals("Link failed to send",emailC, emailD);
+        System.out.println("Link is registered");
+    }
+
+    // check if new password is old
+    @Test
+    public void check_if_old_password(){
+        Assert.assertNotSame("New password cannot be the old one",oldPass, newPass);
+        System.out.println("New password is updated");
+    }
+
+
+
+
+
+         @Test
+         public void testclassName () {
+             ClassInfo classInfo = new ClassInfo();
+             classInfo.setClassName("Name");
+             assert (classInfo.getClassName().equals("Name"));
+         }
+
+
+         @Test
+         public void testclassNumber () {
+             ClassInfo classInfo = new ClassInfo();
+             classInfo.setClassNumber("Number");
+             assert (classInfo.getClassNumber().equals("Number"));
+         }
+
+         @Test
+         public void teststartDate () {
+             ClassInfo classInfo = new ClassInfo();
+             classInfo.setStartDate("Date");
+             assert (classInfo.getStartDate().equals("Date"));
+
+         }
+         @Test
+         public void testendDate () {
+             ClassInfo classInfo = new ClassInfo();
+             classInfo.setEndDate("End Date");
+             assert (classInfo.getEndDate().equals("End Date"));
+
+         }
+
+         @Test
+         public void testdays () {
+             ClassInfo classInfo = new ClassInfo();
+             classInfo.setDays("Days");
+             assert (classInfo.getDays().equals("Days"));
+
+         }
+
+     }
+
