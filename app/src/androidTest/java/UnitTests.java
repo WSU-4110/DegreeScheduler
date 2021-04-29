@@ -53,7 +53,7 @@ public class UnitTests {
         assert(classInfoDao.getCrn(testCrn).equals(testCrn));
 
     }
-
+//Kassems Part
     String email1 = "Faraj54@gmail.com";
     String email2 = "gx9397@wayne.edu";
     String passWd1= "Wayne123@";
@@ -156,7 +156,7 @@ public class UnitTests {
 
 
 
-
+//Ciah Green
 
     @Test
     public void testclassName () {
